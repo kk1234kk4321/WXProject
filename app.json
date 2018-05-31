@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/addPlateNo/addPlateNo",
+    "pages/paymentInfo/paymentInfo",
+    "pages/payFeets/payFeets",
+    "pages/memberDeals/memberDeals",
+    "pages/searchPark/searchPark",
+    "pages/parkRecord/parkRecord"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00A7D7",
+    "navigationBarTitleText": "停车缴费",
+    "navigationBarTextStyle": "#FFF"
+  }
+}

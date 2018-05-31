@@ -1,0 +1,35 @@
+<view class="container">
+  <view wx:if="{{paymentInfo!=''}}">
+      <view class="item" style='border-bottom: 1px solid #DDDDDD;'>
+        <view style='padding-left:20px;color:#888888'>车牌号</view>
+        <view style='padding-left:10px;color:#888888'>{{plateNum}}</view>
+      </view>
+      <view class="container-item" wx:for="{{paymentInfo}}" wx:for-index="idx" wx:for-item="info">
+        <view class="item" style='border-bottom: 1px solid #DDDDDD;'>
+          <view class="item-lab" style='color:black'>{{info.parkName}}</view>
+          <view class="item-descr" style='color:#FF4500'>¥{{info.payFee}}</view>
+        </view>
+        <view class="item">
+          <view class="item-lab">入场时间</view>
+          <view class="item-descr">{{info.inTime}}</view>
+        </view>
+        <view class="item">
+          <view class="item-lab">缴费时间</view>
+          <view class="item-descr">{{info.payTime}}</view>
+        </view>
+        <view class="item">
+          <view class="item-lab">停车时长</view>
+          <view class="item-descr">{{info.parkDay}}天{{info.parkHour}}小时{{info.parkMinute}}分钟</view>
+        </view>
+        <view class="item">
+          <view class="item-lab">停车费用</view>
+          <view class="item-descr">¥{{info.originFee}}</view>
+        </view>
+        <view class="item">
+          <view class="item-lab">会员优惠</view>
+          <view class="item-descr">¥{{info.dealsFee}}</view>
+        </view>
+      </view>
+  </view>
+  <view style='margin:40px 20px 5px 80px;color:#888888;' wx:else>您暂时还没有在线缴费记录</view>
+</view>

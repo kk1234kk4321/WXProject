@@ -1,0 +1,33 @@
+<form bindsubmit="formSubmit" >
+<view class='container'>
+  <view class='container-item'><text style='padding-left:15px'>优惠项目</text></view>
+  <view class='item'>
+    <view class='item-lab' style='padding-top:5px'>包月时长</view>
+    <view class='item-descr'>
+      <view class="iconfont icon-jia1" style="width:20%;font-size:1.5rem;text-align:right;color:{{addColor}}" data-curr-count="{{currCount}}" 
+      data-price="{{price}}" 
+      data-curr-price="{{currPrice}}" 
+      data-car-no="{{carNo}}" data-park-no="{{parkNo}}" bindtap="add"></view>
+      <view style="width:30%;padding-right:5px"><input name="count" value="{{currCount}}"
+style="width:20px;" disabled="false"></input></view>
+      <view class="iconfont icon-jian" style="width:25%;text-align:right;font-size:1.5rem;color:{{minusColor}}" data-curr-count="{{currCount}}" 
+      data-price="{{price}}" 
+      data-curr-price="{{currPrice}}" 
+      data-car-no="{{carNo}}" data-park-no="{{parkNo}}" bindtap="minus"></view>
+      <view style="padding-left:5px;text-align:right">月</view>
+    </view>
+  </view>
+  <view class='item'>
+    <view class='item-lab'>合计金额</view>
+    <view class='item-descr'>
+      <view style="padding-right:10px;text-align:right">¥</view>
+      <view><input name="dealsFee" value="{{currPrice}}" style="width:35px;" disabled="false"></input></view>
+      <view style="padding-left:5px;text-align:right">元</view>
+    </view>
+  </view>
+</view>
+<view class="container-button">
+  <button type="default"  bindtap="default" style="height:35px;font-size:15px;background-color:#0066FF;color:white" data-price="{{price}}" 
+  data-car-no="{{carNo}}" data-park-no="{{parkNo}}" form-type="submit">去支付</button>
+</view>
+</form>

@@ -1,0 +1,90 @@
+.lf{  
+    float: left;  
+}  
+.rt{  
+    float: right;  
+}  
+.tel{   
+    background-color:white;
+    margin-top:10px;
+    height:80rpx;
+    padding-top: 10px;
+    padding-left: 30px;
+}  
+.chepai{  
+    height: 200rpx;  
+    line-height:200rpx;  
+}  
+.provinces{  
+    overflow: hidden;  
+    background-color: #CED3D9;  
+    padding:30rpx 0;  
+    position: absolute;  
+    bottom: 0;  
+    left: 0;  
+    z-index: 10000;  
+}  
+.pro_li{  
+    font-size: 36rpx;  
+    height: 70rpx;  
+    width: 70rpx;  
+    line-height: 70rpx;  
+    text-align: center;  
+    border: 2rpx solid #ddd;  
+    margin: 5rpx;  
+    background-color:#fff;   
+}  
+.pro_close{  
+    width: 100rpx;  
+    height: 70rpx;  
+    line-height: 70rpx;  
+    font-size: 32rpx;  
+    text-align: center;  
+    background-color: blue;  
+    border: 2rpx solid #ddd;  
+    margin: 5rpx ;  
+    color:white;
+}  
+.pro_del{  
+    width: 100rpx;  
+    height: 70rpx;  
+    line-height: 70rpx;  
+    font-size: 32rpx;  
+    text-align: center;  
+    background-color: blue;  
+    border: 2rpx solid #ddd;  
+    margin: 5rpx;  
+    color:white;
+}  
+.keyNums{  
+    overflow: hidden;  
+    background-color: #CED3D9;  
+    padding:30rpx 0;  
+    position: absolute;  
+    bottom: 0;  
+    left: 0;  
+    z-index: 10000;  
+}  
+.pro_ok{  
+    width: 100rpx;  
+    height: 70rpx;  
+    line-height: 70rpx;  
+    font-size: 32rpx;  
+    text-align: center;  
+    background-color: blue;  
+    border: 2rpx solid #ddd;  
+    margin: 5rpx ;  
+    color:white;
+    /* margin-left: 35%; */  
+}  
+.pro_d{  
+    width: 100rpx;  
+    height: 70rpx;  
+    line-height: 70rpx;  
+    font-size: 32rpx;  
+    text-align: center;  
+    background-color: blue;  
+    border: 2rpx solid #ddd;  
+    margin: 5rpx;
+    color:white;  
+}

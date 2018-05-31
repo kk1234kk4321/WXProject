@@ -1,0 +1,14 @@
+<view class="container">
+  <view wx:if="{{parkInfo!=''}}">
+    <view class="container-item" wx:for="{{parkInfo}}" wx:for-index="idx" wx:for-item="info">
+      <view class="item">
+        <view style="width:50%;float:left;">{{info.parkName}}</view>
+        <view style="width:50%;float:left;">{{info.carTotal}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view style='margin:40px 20px 5px 80px;color:#888888;' wx:else>
+    您暂时查询不到停车场信息
+  </view>
+</view>

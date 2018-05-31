@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="container-item">                           
+    <input type="text" class="search-input" name="parkName" placeholder="请输入停车场名称进行搜索" bindinput='parkNameInput' value="{{parkName}}" />
+    <icon class="icon-search" bindtap="searchPark" data-plate-num="{{parkName}}" type="search" size="14"></icon>
+  </view> 
+</view>

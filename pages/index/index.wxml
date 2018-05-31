@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="container-logo">
+    <image class="zylogo" src="../../img/logo.png"></image>
+  </view>
+  <view class="container-add" bindtap="addPlateNo">
+    <view style="width:32%;padding-left:6px;color:#807D78;">添加新车牌</view>
+    <view class="iconfont icon-jia" style="width:68%;text-align:right;color:#4CBFE0;padding-right:6px;"></view>
+  </view>
+  <view class="container-item">
+    <view class="item" wx:for="{{plateNums}}" wx:for-index="idx" wx:for-item="item">
+      <view style="font-size:16px;color:#000;text-align:center;width:100%;" bindtap="payFeets" data-plate-num="{{item.carNo}}">{{item.carNo}}</view>
+      <!-- <view style="width:20%;color:#888888" class="iconfont icon-zuojiantou" bindtap="payFeets" data-plate-num="{{item.carNo}}"></view> -->
+    </view>
+  </view>
+  <view class="container-others">
+    <view class="others"><image src="../../img/cwyy.png"></image></view>
+    <view class="others"><image src="../../img/tcyh.png"></image></view>
+    <view class="others"><image src="../../img/cqzw.png"></image></view>
+  </view>
+  <!-- <view class="container-others">
+    <view class="others" bindtap="searchPark">剩余车位</view>
+  </view> -->
+  <view class="container-bottom">江苏掌源智能科技有限公司</view>
+</view>

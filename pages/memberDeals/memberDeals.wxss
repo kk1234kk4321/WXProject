@@ -1,0 +1,67 @@
+.container {
+  flex:1;
+  line-height:1.5;
+  font-size:15px ;
+  background-color:white;
+  margin-top:10px;
+} 
+
+.container-item{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #DDDDDD ;
+}
+
+.radio-group{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+/*radio .wx-radio-input{
+  border-radius: 3rpx;
+  height:26rpx;
+  width:26rpx;
+  margin-top:-4rpx;
+}
+
+radio .wx-radio-input.wx-radio-input-checked{
+  background-color: #e02e24;
+  border:1rpx solid #e02e24;
+}*/
+
+radio{ 
+  transform:scale(.6) ;
+  padding-top: 3px;
+ }
+
+ .container-button{
+  position:fixed; bottom:3px;
+  width: 100%
+}
+
+.item{
+  margin-top:3px;
+  padding-bottom:3px;
+  display: flex;
+  flex-direction: row;
+}
+
+.item-lab{
+  color:#0000CC;
+  width: 70%;
+  padding-left:30px;
+}
+
+.item-descr{
+  text-align:right;
+  align-items: center;
+  width: 30%;
+  padding-right:20px;
+  display: flex;
+  flex-direction: row;
+  flex:1;
+}
+

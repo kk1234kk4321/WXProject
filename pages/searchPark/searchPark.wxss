@@ -1,0 +1,19 @@
+/* pages/searchPark/searchPark.wxss */
+.container-item {
+  margin-top: 20px;
+}
+.search-input {
+  border: 1px #999 solid;
+}
+.search-input {
+  width: 80%;
+  float: left;
+  height: 30px;
+  border: 2px #28A7C5 solid;
+  border-radius: 4px;
+}
+.icon-search {
+  width: 10%;
+  float: right;
+  margin-top: 12px;
+}
