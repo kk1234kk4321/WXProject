@@ -34,7 +34,7 @@ Page({
       }
     })
       wx.setNavigationBarTitle({
-        title: '在线缴费记录'
+        title: '历史记录'
       })
   }
 })

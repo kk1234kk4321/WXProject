@@ -39,10 +39,6 @@
         <view class="item-descr" style="color:#00A8D5;font-size:14px;" bindtap="goDeal" data-price="{{feetsData.feeMonth}}" data-car-no="{{plateNum}}" data-park-no="{{feetsData.parkNo}}" wx:if="{{feetsData.memberType!='user_type_free'}}">
           缴费
         </view>
-        <!-- <view class="item-descr" wx:if="{{feetsData.memberType!='user_type_free'}}">
-          <button size="mini" type="default"  bindtap="goDeal" style="height:28px;font-size:13px;background-color:#0066FF;color:white" data-price="{{feetsData.feeMonth}}" data-car-no="{{plateNum}}" data-park-no="{{feetsData.parkNo}}" >充值
-          </button>
-        </view> -->
       </view>
       <view class="plateNum-item" style="height:30px;line-height:30px;" wx:if="{{feetsData.memberType=='user_type_member'||feetsData.memberType=='user_type_expire'}}">
         <view class="item-lab">过期时间</view>
@@ -53,28 +49,27 @@
       <text style='color:#82807A;font-size:14px'>{{feetsData.freeHour}}小时内免费，超过{{feetsData.freeHour}}小时按{{feetsData.feeHour}}元/小时，24小时内不超过{{feetsData.feeTop}}元   
       </text>
     </view>
+
     <view class="container-bottom">
-        <view style='width: 30%;padding-left:6%;font-size:15px;color:black;padding-top:7px' wx:if='{{feetsData.recordStatus==3}}'>补充收费
+      <view style="width:70%;float:left;padding-left:6%;display: flex;flex-direction: row;">
+        <view style='font-size:16px;color:black;' wx:if='{{feetsData.recordStatus==3}}'>补充收费：</view>
+        <view style='font-size:16px;color:black;' wx:else>应缴金额：</view>
+        <view style='font-size:20px;color:#FF4500;'>
+          ¥{{feetsData.finalFee}}
         </view>
-        <view style='width: 30%;padding-left:6%;font-size:15px;color:black;padding-top:7px' wx:else>应缴金额         
+      </view>
+      
+      <view style='width:30%;float:left;' wx:if="{{feetsData.recordStatus==2}}">已支付</view>
+      <view style="width:30%;float:left;" wx:else>
+        <view wx:if="{{feetsData.memberType=='user_type_member'||feetsData.finalFee==0||feetsData.memberType=='user_type_free'}}">
+          <button size="mini" type="default" bindtap="goUpdate" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-fee="{{feetsData.finalFee}}" data-record-id="{{feetsData.recordId}}" data-origin-fee="{{feetsData.originFee}}">确定
+          </button>
         </view>
-        <view style='width: 30%;text-align:right;font-size:20px;color:#FF4500;padding-top:3px'>¥{{feetsData.finalFee}}
+        <view wx:else>
+          <button size="mini" type="default" bindtap="goPay" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-fee="{{feetsData.finalFee}}" data-record-id="{{feetsData.recordId}}" data-origin-fee="{{feetsData.originFee}}" >支付
+          </button>
         </view>
-
-        <view style='width:40%;padding-top:6px;text-align:right;padding-right:6%;' wx:if="{{feetsData.recordStatus==2}}">已支付
-        </view>
-        <view style="width:40%;padding-right:6%;" wx:else>
-          <view style='padding-top:6px;text-align:right;padding-left:10px' wx:if="{{feetsData.memberType=='user_type_member'||feetsData.finalFee==0||feetsData.memberType=='user_type_free'}}">
-            <button size="mini" type="default"  bindtap="goUpdate" style="height:28px;font-size:13px;background-color:#0066FF;color:white" data-fee="{{feetsData.finalFee}}" data-record-id="{{feetsData.recordId}}" data-origin-fee="{{feetsData.originFee}}" >确定
-            </button>
-          </view>
-          <view style='padding-top:6px;text-align:right;' wx:else>
-            <button size="mini" type="default"  bindtap="goPay" style="height:28px;font-size:13px;background-color:#0066FF;color:white" data-fee="{{feetsData.finalFee}}" data-record-id="{{feetsData.recordId}}" data-origin-fee="{{feetsData.originFee}}" >去支付
-            </button>
-          </view>
-        </view>
+      </view>
     </view>
-
-    <view style="margin-top:10px;height:30px;text-align:center;color:#72706B;font-size:14px;">江苏掌源智能科技有限公司</view>
   </view>
 </view>

@@ -7,7 +7,7 @@
     "pages/payFeets/payFeets",
     "pages/memberDeals/memberDeals",
     "pages/searchPark/searchPark",
-    "pages/parkRecord/parkRecord"
+    "pages/parkInfo/parkInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

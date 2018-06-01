@@ -1,15 +1,16 @@
 .container {
   flex:1;
   line-height:1.5;
-  font-size:15px ;
   background-color:white;
-  margin-top:10px;
+  /* margin-top:10px; */
 } 
 
 .container-item{
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #DDDDDD ;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  border-bottom: 1px solid #BEE6F2 ;
+  color: #716F6A;
 }
 
 .radio-group{
@@ -38,8 +39,12 @@ radio{
  }
 
  .container-button{
-  position:fixed; bottom:3px;
-  width: 100%
+  position:fixed;
+  bottom:0px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px #BEE6F2 solid;
 }
 
 .item{
@@ -50,7 +55,7 @@ radio{
 }
 
 .item-lab{
-  color:#0000CC;
+  color:#000;
   width: 70%;
   padding-left:30px;
 }

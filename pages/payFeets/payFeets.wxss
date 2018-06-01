@@ -62,8 +62,10 @@
   background-color:white;
   display: flex;
   flex-direction: row;
-  /* position:fixed; 
-  bottom:3px;  */
+  position:fixed; 
+  bottom:0px;  
   width: 100%;
-  margin-top:100px;
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px #BEE6F2 solid;
 }

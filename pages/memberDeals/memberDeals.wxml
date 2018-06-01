@@ -1,33 +1,33 @@
 <form bindsubmit="formSubmit" >
 <view class='container'>
-  <view class='container-item'><text style='padding-left:15px'>优惠项目</text></view>
-  <view class='item'>
-    <view class='item-lab' style='padding-top:5px'>包月时长</view>
-    <view class='item-descr'>
-      <view class="iconfont icon-jia1" style="width:20%;font-size:1.5rem;text-align:right;color:{{addColor}}" data-curr-count="{{currCount}}" 
-      data-price="{{price}}" 
-      data-curr-price="{{currPrice}}" 
-      data-car-no="{{carNo}}" data-park-no="{{parkNo}}" bindtap="add"></view>
-      <view style="width:30%;padding-right:5px"><input name="count" value="{{currCount}}"
-style="width:20px;" disabled="false"></input></view>
-      <view class="iconfont icon-jian" style="width:25%;text-align:right;font-size:1.5rem;color:{{minusColor}}" data-curr-count="{{currCount}}" 
-      data-price="{{price}}" 
-      data-curr-price="{{currPrice}}" 
-      data-car-no="{{carNo}}" data-park-no="{{parkNo}}" bindtap="minus"></view>
+  <view class='container-item'>{{carNo}}</view>
+  <view class='item' style="margin-top:20px;">
+    <view class='item-lab' style='width:40%;padding-top:5px;letter-spacing:2px;'>包月时长</view>
+    <view class='item-descr' style="padding:0px;">
+      <view style="width:80%;border:2px #00A6D6 solid;border-radius:4px;">
+        <view class="iconfont icon-jian" style="width:26%;float:left;border-right:1px #00A6D6 solid;text-align:center;font-size:1.5rem;color:{{minusColor}}" data-curr-count="{{currCount}}" 
+        data-price="{{price}}" 
+        data-curr-price="{{currPrice}}" 
+        data-car-no="{{carNo}}" data-park-no="{{parkNo}}" bindtap="minus"></view>
+        <view style="width:46%;float:left;padding-top:8px;text-align:center">
+          <input name="count" value="{{currCount}}" disabled="false"></input>
+        </view>
+        <view class="iconfont icon-jia" style="width:26%;float:left;border-left:1px #00A6D6 solid;font-size:1.5rem;text-align:center;color:{{addColor}}" data-curr-count="{{currCount}}" 
+        data-price="{{price}}" 
+        data-curr-price="{{currPrice}}" 
+        data-car-no="{{carNo}}" data-park-no="{{parkNo}}" bindtap="add"></view>
+      </view>
       <view style="padding-left:5px;text-align:right">月</view>
-    </view>
-  </view>
-  <view class='item'>
-    <view class='item-lab'>合计金额</view>
-    <view class='item-descr'>
-      <view style="padding-right:10px;text-align:right">¥</view>
-      <view><input name="dealsFee" value="{{currPrice}}" style="width:35px;" disabled="false"></input></view>
-      <view style="padding-left:5px;text-align:right">元</view>
     </view>
   </view>
 </view>
 <view class="container-button">
-  <button type="default"  bindtap="default" style="height:35px;font-size:15px;background-color:#0066FF;color:white" data-price="{{price}}" 
-  data-car-no="{{carNo}}" data-park-no="{{parkNo}}" form-type="submit">去支付</button>
+  <view class='item' style="width:70%;float:left;margin:0px;padding:0px;">
+    <view style="padding-left:30px;">合计：</view>
+    <view style="text-align:left;color:#FF972E;font-size:20px;margin-right:4px;">¥</view>
+    <view><input name="dealsFee" value="{{currPrice}}" style="width:45px;font-size:20px;color:#FF972E;padding-top:13px;" disabled="false"></input></view>
+  </view>
+  <button type="default"  bindtap="default" style="width:30%;height:50px;line-height:50px;float:left;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-price="{{price}}" 
+  data-car-no="{{carNo}}" data-park-no="{{parkNo}}" form-type="submit">充值</button>
 </view>
 </form>

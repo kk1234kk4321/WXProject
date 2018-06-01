@@ -1,4 +1,3 @@
-
 //index.js
 //获取应用实例
 const app = getApp()
@@ -12,7 +11,7 @@ Page({
     //openId:{}
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
@@ -28,12 +27,12 @@ Page({
       that.getPlateNums(app.globalData.openId)
     } else {
       console.log("else====", app.globalData.openId)
-        wx.login({
+      wx.login({
         success: res => {
-          console.log("res.code ====>", res.code )
+          console.log("res.code ====>", res.code)
           // 发送 res.code 到后台换取 openId, sessionKey, unionId
           var that = this;
-          if(res.code){
+          if (res.code) {
             wx.request({
               url: app.globalData.url + '/car/weixin/jscode/' + res.code,
               data: {},
@@ -58,7 +57,7 @@ Page({
   getPlateNums(openid) {
     var that = this;
     wx.request({
-      url: app.globalData.url+'/car/weixin/openid/' + openid,
+      url: app.globalData.url + '/car/weixin/openid/' + openid,
       method: 'GET',
       data: {},
       header: {
@@ -73,7 +72,7 @@ Page({
       }
     })
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -81,20 +80,20 @@ Page({
       hasUserInfo: true
     })
   },
-  addPlateNo:function(e){
+  addPlateNo: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     wx.navigateTo({
       url: '/pages/addPlateNo/addPlateNo'
     })
   },
-  payFeets:function(e){
+  payFeets: function (e) {
     var plateNum = e.currentTarget.dataset.plateNum;
     console.log('当前车牌号为', plateNum);
     wx.navigateTo({
-      url: '/pages/payFeets/payFeets?plateNum='+plateNum
+      url: '/pages/payFeets/payFeets?plateNum=' + plateNum
     })
   },
-  searchPark:function(e){
+  searchPark: function (e) {
     console.log("欢迎来停车场搜索页面");
     //console.log(e);
     wx.navigateTo({
