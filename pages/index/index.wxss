@@ -47,8 +47,8 @@
 }
 
 .zylogo {
-  width: 191px;
-  height: 121px;
+  width: 191.5px;
+  height: 116.25px;
   margin: 0 auto;
 }
 
