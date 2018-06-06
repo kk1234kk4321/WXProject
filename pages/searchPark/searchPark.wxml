@@ -1,19 +1,43 @@
 <view class="container">
-  <view class="container-item" style="padding-bottom:  30px;">                           
-    <input type="text" class="search-input" name="parkName" placeholder="请输入停车场名称进行搜索" bindinput='parkNameInput' value="{{parkName}}" />
-    <icon class="icon-search" bindtap="searchPark" data-plate-num="{{parkName}}" type="search" size="14"></icon>
-  </view> 
+  <view wx:if="{{plateNum=='carNo'}}"><!--车位预约-->
+    <!-- <view class="container-item">{{plateNum}}</view> -->
+    <view class="container-item" style="padding-bottom:  30px;">                           
+      <input type="text" class="search-input" name="parkName" placeholder="请输入停车场名称进行搜索" bindinput='parkNameInput' value="{{parkName}}" />
+      <icon class="icon-search" bindtap="searchPark" type="search" size="14"></icon>
+    </view> 
 
-  <view wx:if="{{parkList!=''}}">
-    <view class="container-item" wx:for="{{parkList}}" wx:for-index="idx" wx:for-item="info">
-      <view class="item" bindtap="parkDetails" data-plate-num="{{info.parkName}}">
-        <view style="width:80%;float:left;text-align:left;padding-left:6%;">{{info.parkName}}</view>
-        <view style="width:14%;float:left;text-align:center;">{{info.carTotal}}</view>
+    <view wx:if="{{parkList!=''}}">
+      <view class="container-item" wx:for="{{parkList}}" wx:for-index="idx" wx:for-item="info">
+        <view class="item" bindtap="parkInfo" data-park-name="{{info.parkName}}">
+          <view style="width:80%;float:left;text-align:left;padding-left:6%;">{{info.parkName}}</view>
+           <view style="width:14%;float:left;text-align:center;">{{info.carTotal}}</view> 
+        </view>
       </view>
+    </view>
+
+    <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>
+      您暂时查询不到停车场信息
     </view>
   </view>
 
-  <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>
-    您暂时查询不到停车场信息
+  <view wx:else><!--长期租位-->
+    <view class="container-item">{{plateNum}}</view>
+    <view class="container-item" style="padding-bottom:  30px;">                           
+      <input type="text" class="search-input" name="parkName" placeholder="请输入停车场名称进行搜索" bindinput='parkNameInput' value="{{parkName}}" />
+      <icon class="icon-search" bindtap="searchPark" type="search" size="14"></icon>
+    </view> 
+
+    <view wx:if="{{parkList!=''}}">
+      <view class="container-item" wx:for="{{parkList}}" wx:for-index="idx" wx:for-item="info">
+        <view class="item" bindtap="memberDeals" data-park-name="{{info.parkName}}" data-price="{{info.feeMonth}}" data-car-no="{{info.carNo}}" data-park-no="{{info.parkNo}}">
+          <view style="width:80%;float:left;text-align:left;padding-left:6%;">{{info.parkName}}</view>
+          <!-- <view style="width:14%;float:left;text-align:center;">{{info.carTotal}}</view> -->
+        </view>
+      </view>
+    </view>
+
+    <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>
+      您暂时查询不到停车场信息
+    </view>
   </view>
 </view>
