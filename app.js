@@ -73,8 +73,20 @@ App({
       success: function (res) {
         console.log("调用接口成功")
         console.log(res.data.data)
-        that.globalData.plateNums = res.data.data;
+        that.globalData.plateNums = res.data.data.list;
+        getAuthorty(res.data.data.authorities);
       }
     })
+  },
+  getAuthorty(array){
+    var that = this;
+    if(array!=null&&array.length>0){
+      for(var i=0;i<array.length;i++){
+        console.log("array[i].authorty==", array[i].authorty);
+        if (array[i].authorty =="ROLE_PARK_USER"){
+          that.globalData.authorty = 1;
+        }
+      }
+    }
   }
 })

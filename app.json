@@ -9,7 +9,12 @@
     "pages/searchPark/searchPark",
     "pages/parkInfo/parkInfo",
     "pages/rentParkingplace/rentParkingplace",
-    "pages/applyCar/applyCar"
+    "pages/applyCar/applyCar",
+    "pages/parkManage/parkManage",
+    "pages/updateFeeInfo/updateFeeInfo",
+    "pages/parkOwnerManage/parkOwnerManage",
+    "pages/myInfo/myInfo",
+    "pages/rentParkingplace/rentParkingplace"
   ],
   "window": {
     "backgroundTextStyle": "light",
