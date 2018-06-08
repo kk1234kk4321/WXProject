@@ -62,8 +62,9 @@ Page({
       success: function(res) {
         console.log("调用接口成功");
         console.log(res.data.data);
+        
         that.setData({
-          plateNums: res.data.data
+          plateNums: res.data.data.list
         })
       }
     })

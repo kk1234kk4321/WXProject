@@ -1,5 +1,4 @@
 const app = getApp()
-//var feetsData = require("../payFeets/feetsData.js");
 Page({
   data:{
     feetsData:{},
