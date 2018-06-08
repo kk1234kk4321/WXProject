@@ -28,13 +28,15 @@
       <view class="item-lab">24小时内最多收费</view>
       <view class="item-descr">{{parkInfo.feeTop}}元</view>
     </view>
-    <view class="item">
-      <view class="item-lab" style="color:red;">按月收费</view>
-      <view class="item-descr"></view>
-    </view>
-    <view class="item">
-      <view class="item-lab">每月收费价格</view>
-      <view class="item-descr">{{parkInfo.feeMonth}}元/月</view>
-    </view>
+     <view wx:if="{{parkInfo.feeMonth!=''&&parkInfo.feeMonth!=null}}"> 
+      <view class="item">
+        <view class="item-lab" style="color:red;">按月收费</view>
+        <view class="item-descr"></view>
+      </view>
+      <view class="item">
+        <view class="item-lab">每月收费价格</view>
+        <view class="item-descr">{{parkInfo.feeMonth}}元/月</view>
+      </view>
+     </view> 
   </view>
 </view>

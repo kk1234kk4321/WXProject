@@ -99,11 +99,19 @@ Page({
       url: '/pages/payFeets/payFeets?plateNum=' + plateNum
     })
   },
-  searchPark: function (e) {
+  searchPark: function (e) {//车位预约
+    var plateNum = "carNo";
     console.log("欢迎来停车场搜索页面");
     //console.log(e);
     wx.navigateTo({
-      url: '/pages/searchPark/searchPark'
+      url: '/pages/searchPark/searchPark?plateNum=' + plateNum
+    })
+  },
+  //长期租位
+  rentParkingplace: function (e) {
+    console.log("进入长期租位页面");
+    wx.navigateTo({
+      url: '/pages/rentParkingplace/rentParkingplace',
     })
   },
   getAuthorty(array) {

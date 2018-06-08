@@ -11,7 +11,8 @@
     "pages/parkManage/parkManage",
     "pages/updateFeeInfo/updateFeeInfo",
     "pages/parkOwnerManage/parkOwnerManage",
-    "pages/myInfo/myInfo"
+    "pages/myInfo/myInfo",
+    "pages/rentParkingplace/rentParkingplace"
   ],
   "window": {
     "backgroundTextStyle": "light",

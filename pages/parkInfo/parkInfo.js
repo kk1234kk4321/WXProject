@@ -24,7 +24,8 @@ Page({
     console.log("车位情况====>")
 
     wx.request({
-      url: app.globalData.url + '/park/parkInfo/parkName/' + encodeURI(parkName),
+      // url: app.globalData.url + '/park/parkInfo/parkName/' + encodeURI(parkName),
+      url: app.globalData.url + '/car/weixin/parkInfo/parkName/' + encodeURI(parkName),
       method: 'GET',
       data: {},
       header: {
