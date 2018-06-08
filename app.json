@@ -7,7 +7,11 @@
     "pages/payFeets/payFeets",
     "pages/memberDeals/memberDeals",
     "pages/searchPark/searchPark",
-    "pages/parkInfo/parkInfo"
+    "pages/parkInfo/parkInfo",
+    "pages/parkManage/parkManage",
+    "pages/updateFeeInfo/updateFeeInfo",
+    "pages/parkOwnerManage/parkOwnerManage",
+    "pages/myInfo/myInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

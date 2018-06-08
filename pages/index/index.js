@@ -8,6 +8,7 @@ Page({
     //hasUserInfo: false,
     //canIUse: wx.canIUse('button.open-type.getUserInfo'),
     plateNums: {},
+    authorty:0
     //openId:{}
   },
   //事件处理函数
@@ -33,6 +34,7 @@ Page({
           // 发送 res.code 到后台换取 openId, sessionKey, unionId
           var that = this;
           if (res.code) {
+            console.log("url====>", app.globalData.url + '/car/weixin/jscode/' + res.code)
             wx.request({
               url: app.globalData.url + '/car/weixin/jscode/' + res.code,
               data: {},
@@ -66,8 +68,12 @@ Page({
       success: function (res) {
         console.log("调用接口成功")
         console.log(res.data.data)
+        that.getAuthorty(res.data.data.authorities);
+
+        console.log("app.globalData.authorty==", app.globalData.authorty)
         that.setData({
-          plateNums: res.data.data
+          plateNums: res.data.data.list,
+          authorty: app.globalData.authorty
         })
       }
     })
@@ -98,6 +104,26 @@ Page({
     //console.log(e);
     wx.navigateTo({
       url: '/pages/searchPark/searchPark'
+    })
+  },
+  getAuthorty(array) {
+    if(array!=null&&array.length>0){
+      for (var i = 0; i < array.length; i++) {
+        console.log("array[i].authorty==", array[i].authorty);
+        if (array[i].authorty == "ROLE_PARK_OWNER") {
+          app.globalData.authorty = 1;
+        }
+      }
+    }
+  },
+  parkManage:function(e){
+    wx.navigateTo({
+      url: '/pages/parkManage/parkManage'
+    })
+  },
+  myinfo:function(){
+    wx.navigateTo({
+      url: '/pages/myInfo/myInfo'
     })
   }
 })

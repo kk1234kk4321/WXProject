@@ -57,9 +57,10 @@ App({
     userInfo: null,
     plateNums:null,
     openId:null,
-    url:'http://localhost'
+    authorty:0,
+     // url:'http://localhost:8080'
     //url:'http://192.168.1.113:8080'
-    //url:'https://park.zhangyuanzhineng.com'
+    url:'https://park.zhangyuanzhineng.com'
   },
   getPlateNums(openid){
     var that = this;
@@ -73,8 +74,20 @@ App({
       success: function (res) {
         console.log("调用接口成功")
         console.log(res.data.data)
-        that.globalData.plateNums = res.data.data;
+        that.globalData.plateNums = res.data.data.list;
+        getAuthorty(res.data.data.authorities);
       }
     })
+  },
+  getAuthorty(array){
+    var that = this;
+    if(array!=null&&array.length>0){
+      for(var i=0;i<array.length;i++){
+        console.log("array[i].authorty==", array[i].authorty);
+        if (array[i].authorty =="ROLE_PARK_USER"){
+          that.globalData.authorty = 1;
+        }
+      }
+    }
   }
 })
