@@ -1,0 +1,5 @@
+<view class="container">
+  <view style="margin-top:40px;text-align:center;color:#888888;font-size:15px;">
+    您已申请通行证，需要审核？请耐心等候...
+  </view>
+</view>

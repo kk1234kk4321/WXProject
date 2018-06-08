@@ -14,7 +14,8 @@ Page({
     currPrice: 0,
     totalPrice: 0,
     carNo: '',
-    parkNo: ''
+    parkNo: '',
+    applyCar: ''
   },
 
   /**
@@ -42,6 +43,28 @@ Page({
       parkNo: res.parkNo,
       carNo: res.carNo
     });
+  },
+  //生命周期函数 -- 监听页面显示
+  onShow() {
+    var that = this;
+    var openId = app.globalData.openId;
+    var carNo = that.data.carNo;
+    var parkNo = that.data.parkNo;
+
+    wx.request({
+      url: app.globalData.url + '/car/weixin/carNo/' + encodeURI(carNo) + '/parkNo/' + encodeURI(parkNo),
+      method: 'GET',
+      data: {},
+      header: {
+        "content-type": 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log("申请状态===>", res.data.data);
+        that.setData({
+          applyCar: res.data.data,
+        })
+      }
+    })
   },
   add(event) {
     var data = event.target.dataset;
@@ -183,6 +206,33 @@ Page({
   },
   radioChange: function (e) {
     console.log('radio发生change事件，携带value值为：', e.detail.value)
-  }
+  },
+  //申请通行证
+  applyCar: function(e) {
+    console.log("您正在申请通行证，需要审核？请耐心等候...")
+    var openId = app.globalData.openId; 
+    var carNo = e.currentTarget.dataset.carNo;
+    var parkNo = e.currentTarget.dataset.parkNo;
+    console.log("openId：", openId);
+    console.log("车牌：", carNo);
+    console.log("停车场编号：", parkNo);
+    var that = this;
 
+    wx.request({
+      url: app.globalData.url + '/car/weixin/openId/' + encodeURI(openId) + '/carNo/' + encodeURI(carNo) + '/parkNo/' + encodeURI(parkNo),
+      method: 'GET',
+      data: {},
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function(res) {
+        console.log("调用接口成功")
+        console.log("applyCar====>", res.data.data);
+
+        wx.navigateTo({
+          url: '/pages/applyCar/applyCar'
+        })
+      }
+    })
+  }
 })

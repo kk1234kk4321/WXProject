@@ -1,41 +1,54 @@
 <view class="container">
-  <view wx:if="{{plateNum=='carNo'}}"><!--车位预约-->
+  <view style="margin-top:20px;" wx:if="{{plateNum=='carNo'}}"><!--车位预约-->
     <!-- <view class="container-item">{{plateNum}}</view> -->
-    <view class="container-item" style="padding-bottom:  30px;">                           
-      <input type="text" class="search-input" name="parkName" placeholder="请输入停车场名称进行搜索" bindinput='parkNameInput' value="{{parkName}}" />
-      <icon class="icon-search" bindtap="searchPark" type="search" size="14"></icon>
+    <view class="container-item" style="padding-bottom:20px;">   
+      <view class="search"> 
+        <view class="search-input">
+          <input style="width:100%;height:36px;line-height:36px;padding-left:6px;" type="text" placeholder="请搜索停车场" bindinput='parkNameInput' value="{{parkName}}"/>
+        </view>    
+        <view class="iconfont icon-sousuo4" style="font-size:24px;" bindtap="searchPark"></view>
+      </view>
     </view> 
-
     <view wx:if="{{parkList!=''}}">
       <view class="container-item" wx:for="{{parkList}}" wx:for-index="idx" wx:for-item="info">
         <view class="item" bindtap="parkInfo" data-park-name="{{info.parkName}}">
-          <view style="width:80%;float:left;text-align:left;padding-left:6%;">{{info.parkName}}</view>
-           <view style="width:14%;float:left;text-align:center;">{{info.carTotal}}</view> 
+          <view style="width:60%;float:left;text-align:left;font-size:17px;">
+            <view style="padding-left:20px;">{{info.parkName}}</view>
+          </view>
+          <view style="width:26%;float:left;text-align:right;font-size:15px;color:#6E6C69;">车位剩余：</view> 
+          <view style="width:14%;float:left;text-align:right;font-size:15px;color:#6E6C69;">
+            <view style="padding-right:20px;">{{info.carTotal}}</view>
+          </view> 
         </view>
       </view>
     </view>
-
     <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>
       您暂时查询不到停车场信息
     </view>
   </view>
 
-  <view wx:else><!--长期租位-->
-    <view class="container-item">{{plateNum}}</view>
-    <view class="container-item" style="padding-bottom:  30px;">                           
-      <input type="text" class="search-input" name="parkName" placeholder="请输入停车场名称进行搜索" bindinput='parkNameInput' value="{{parkName}}" />
-      <icon class="icon-search" bindtap="searchPark" type="search" size="14"></icon>
+  <view style="margin-top:10px;" wx:else><!--长期租位-->
+    <view class="container-item" style="padding-left:7%;height:40px;line-height:40px;font-size:18px;">{{plateNum}}</view>
+    <view class="container-item" style="padding-bottom:20px;margin-top:10px;">   
+      <view class="search"> 
+        <view class="search-input">
+          <input style="width:100%;height:36px;line-height:36px;padding-left:6px;" type="text" placeholder="请搜索停车场" bindinput='parkNameInput' value="{{parkName}}"/>
+        </view>    
+        <view class="iconfont icon-sousuo4" style="font-size:24px;" bindtap="searchPark"></view>
+      </view>
     </view> 
-
     <view wx:if="{{parkList!=''}}">
       <view class="container-item" wx:for="{{parkList}}" wx:for-index="idx" wx:for-item="info">
         <view class="item" bindtap="memberDeals" data-park-name="{{info.parkName}}" data-price="{{info.feeMonth}}" data-car-no="{{info.carNo}}" data-park-no="{{info.parkNo}}">
-          <view style="width:80%;float:left;text-align:left;padding-left:6%;">{{info.parkName}}</view>
-          <!-- <view style="width:14%;float:left;text-align:center;">{{info.carTotal}}</view> -->
+          <view style="width:60%;float:left;text-align:left;font-size:17px;">
+            <view style="padding-left:20px;">{{info.parkName}}</view>
+          </view>
+          <view style="width:40%;float:left;text-align:right;font-size:15px;color:#6E6C69;">
+            <view style="padding-right:20px;color:#00A7D3;">长期租位</view>
+          </view>
         </view>
       </view>
     </view>
-
     <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>
       您暂时查询不到停车场信息
     </view>

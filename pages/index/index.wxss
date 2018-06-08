@@ -56,7 +56,7 @@
   display: flex;
   flex-direction: row;
   margin-top: 20px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .container-others image {
@@ -88,7 +88,7 @@
   width: 100%;
   height: 30px;
   line-height: 30px;
-  border-top: 1px #BEE6F2 solid;  
+  /* border-top: 1px #BEE6F2 solid;   */
   color:#72706B;
   font-size:14px;
 } 

@@ -22,7 +22,7 @@
         <view class="item-descr">{{feetsData.originFee}}元</view>
       </view>
     </view>
-    <view style='margin:40px 20px 5px 80px;color:#888888;' wx:else>您当前还没有缴费信息</view>
+    <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>您当前还没有缴费信息</view>
   </view>
     
   <view wx:if="{{feetsData!=''}}">

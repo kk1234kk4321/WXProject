@@ -8,7 +8,8 @@
     "pages/memberDeals/memberDeals",
     "pages/searchPark/searchPark",
     "pages/parkInfo/parkInfo",
-    "pages/rentParkingplace/rentParkingplace"
+    "pages/rentParkingplace/rentParkingplace",
+    "pages/applyCar/applyCar"
   ],
   "window": {
     "backgroundTextStyle": "light",
