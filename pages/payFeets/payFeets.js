@@ -172,5 +172,39 @@ Page({
         })
       }
     })
+  },
+  deleteCar: function (e) {
+    var carNo = this.data.plateNum;
+    wx.request({
+      url: app.globalData.url + '/car/weixin/deleteCar/openid/' + app.globalData.openId + '/carno/' + encodeURI(carNo),
+      method: 'GET',
+      data: {},
+      header: {
+        "content-type": 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log("调用解除绑定接口成功")
+        console.log("res.data====>", res)
+        wx.navigateTo({
+          url: '/pages/index/index',
+          success: function (res) {
+            wx.showToast({
+              title: '解除绑定成功',
+              icon: 'success',
+              duration: 2000
+            })
+          }
+        })
+      },
+      fail: function (res) {
+        console.log("调用解除绑定接口失败")
+        console.log(res)
+        wx.showToast({
+          title: '解除绑定失败',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    })
   }
 })
