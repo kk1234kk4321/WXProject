@@ -126,7 +126,7 @@ Page({
     var title = 'test'
     //统一支付   
     wx.request({
-      url: app.globalData.url + '/car/weixin/pay/openid/' + openId + '/title/' + title + '/fee/' + 1,
+      url: app.globalData.url + '/car/weixin/pay/openid/' + openId + '/title/' + title + '/fee/' + fee,
       method: 'GET',
       header: {
         "content-type": 'application/x-www-form-urlencoded'
