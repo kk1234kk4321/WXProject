@@ -75,7 +75,14 @@ Page({
           duration: 2000
         })
         wx.navigateTo({
-          url: '/pages/index/index'
+          url: '/pages/index/index',
+          success: function (res) {
+            wx.showToast({
+              title: '保存成功',
+              icon: 'success',
+              duration: 2000
+            })
+          }
         })
       },
       fail: function (res) {
@@ -83,7 +90,7 @@ Page({
         console.log("失败原因====>", res)
         wx.showToast({
           title: '保存失败',
-          icon: 'fail',
+          icon: 'none',
           duration: 2000
         })
       }

@@ -166,10 +166,10 @@ Page({
     console.log('openId=', openId)
     console.log('fee=', fee)
     var that = this
-    var title = '支付测试'
+    var title = 'test'
     //统一支付   
     wx.request({
-      url: app.globalData.url + '/car/weixin/pay/openid/' + openId + '/title/' + title + '/fee/' + fee,
+      url: app.globalData.url + '/car/weixin/pay/openid/' + openId + '/title/' + title + '/fee/' + 1,
       method: 'GET',
       header: {
         "content-type": 'application/x-www-form-urlencoded'

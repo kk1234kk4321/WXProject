@@ -142,7 +142,7 @@ Page({
         success: function (res) {
           console.log("调用接口成功")
           console.log("res.data====>",res)
-          wx.redirectTo({
+          wx.navigateTo({
             url: '/pages/index/index',
             success: function (res) {
               wx.showToast({

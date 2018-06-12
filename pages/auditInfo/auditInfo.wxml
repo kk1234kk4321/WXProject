@@ -1,0 +1,32 @@
+<view class="container">
+  <view wx:if="{{array!=''}}">
+    <view class="container-item">
+      <view class="item" wx:for="{{array}}" wx:for-index="idx" wx:for-item="item">
+        <view class="item-lab" style="padding-left:3%;">{{item.carNo}}</view>
+        <view class="item-descr" style="padding-right:3%;">
+          <view class="button-view">
+            <view class="item-button" wx:if="{{item.status==2}}">
+              <button size="mini"  style="width:80px;height:25px;line-height:25px;font-size:14px;background-color:#DDDDDD;color:#86837E;" >通过
+              </button>
+            </view>
+            <view class="item-button" wx:else>
+              <button size="mini"  bindtap="goAudit" style="width:80px;height:25px;line-height:25px;font-size:14px;background-color:#BEE6F2;color:#00A7D6;" data-status="{{2}}" data-id="{{item.id}}" data-park-id="{{item.parkId}}" data-car-no="{{item.carNo}}" >通过
+              </button>
+            </view>
+            <view class="item-button" wx:if="{{item.status==3}}">
+              <button size="mini" style="width:80px;height:25px;line-height:25px;font-size:14px;background-color:#DDDDDD;color:#86837E;" >不通过
+              </button>
+            </view>
+            <view class="item-button" wx:else>
+              <button size="mini"  bindtap="goAudit" style="width:80px;height:25px;line-height:25px;font-size:14px;background-color:#BEE6F2;color:#00A7D6;" data-status="{{3}}" data-id="{{item.id}}" data-park-id="{{item.parkId}}" data-car-no="{{item.carNo}}" >不通过
+              </button>
+            </view>
+          </view>
+        </view>
+    </view>
+
+      
+    </view>
+  </view>
+  <view style='margin:40px 20px 5px 80px;color:#888888;' wx:else>您当前还没有需审核信息</view>
+</view>
