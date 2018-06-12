@@ -1,0 +1,80 @@
+<view class="container">
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view wx:if="{{array!=''}}">
+  <view class="container-item">
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;">
+        <view class="item-lab" style="padding-left:3%;">停车场名称</view>
+        <view class="item-descr" style="padding-right:3%;">{{array.parkName}}</view>
+    </view>
+
+    <view class="plateNum-item" style="background:#BEE6F2;width:100%;margin:0 auto;height:30px;line-height:30px;">
+        <view class="item-lab" style="padding-left:5%;color:black">按时计费</view>
+        <view class="item-descr" style="padding-right:3%;"></view>
+    </view>
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab" style="padding-left:3%;">
+          <view class="inputView"><input class="input" name="freeHour" maxlength="10" value="{{array.freeHour}}" /></view>
+        </view>
+        <view class="item-descr" style="padding-right:3%;">免费时间，单位：小时</view>
+    </view>
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:40px;line-height:20px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab" style="padding-left:3%;">
+          <view class="inputView"><input class="input" name="feeHour"  maxlength="10" value="{{array.feeHour}}" /></view>
+        </view>
+        <view class="item-descr" style="padding-right:3%;">免费时间外计费价格，单位：元/小时</view>
+    </view>
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;">
+        <view class="item-lab" style="padding-left:3%;">
+          <view class="inputView"><input class="input" name="feeTop"  maxlength="10" value="{{array.feeTop}}" /></view>
+        </view>
+        <view class="item-descr" style="padding-right:3%;">24小时内最多收费，单位：元</view>
+    </view>
+
+    <view class="plateNum-item" style="background:#BEE6F2;width:100%;margin:0 auto;height:30px;line-height:30px;">
+        <view class="item-lab" style="padding-left:5%;color:black">按月计费</view>
+        <view class="item-descr" style="padding-right:3%;"></view>
+    </view>
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab" style="padding-left:3%;">
+          <view class="inputView"><input class="input" name="feeMonth"  maxlength="10" value="{{array.feeMonth}}" /></view>
+        </view>
+        <view class="item-descr" style="padding-right:3%;">元/月</view>
+    </view>
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab" style="padding-left:3%;">支付宝账号</view>
+        <view class="item-descr" style="padding-right:3%;">{{array.alipay}}</view>
+    </view>
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab" style="padding-left:3%;">微信账号</view>
+        <view class="item-descr" style="padding-right:3%;">{{array.weixin}}</view>
+    </view>
+
+    <!--<view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab" style="padding-left:3%;">OPENID</view>
+        <view class="item-descr" style="padding-right:3%;"></view>
+    </view>
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab" style="padding-left:3%;width:10%"></view>
+        <view class="item-descr" style="padding-right:3%;width:90%">{{array.openid}}</view>
+    </view>-->
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;">
+        <view class="item-lab" style="padding-left:3%;">总车位数</view>
+        <view class="item-descr" style="padding-right:3%;">{{array.carTotal}}</view>
+    </view>
+  </view>
+
+  <view style="padding-top:20px;">
+     <button formType="submit"  style="width:100%;height:50px;line-height:50px;font-size:17px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-park-id="{{array.id}}" >确定        </button>
+  </view>
+</view>
+<view style='margin:40px 20px 5px 80px;color:#888888;' wx:else>您当前还没有停车场信息</view>
+</form>
+</view>

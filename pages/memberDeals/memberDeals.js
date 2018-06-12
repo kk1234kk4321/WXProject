@@ -15,7 +15,8 @@ Page({
     totalPrice: 0,
     carNo: '',
     parkNo: '',
-    applyCar: ''
+    applyCar: '',
+    carMember: ''
   },
 
   /**
@@ -28,6 +29,8 @@ Page({
     })
     var addColor = '#00A6D6';
     var minusColor = '#00A6D6';
+    var startTime = new Date();
+    console.log("起始时间：", startTime);
     if (res.currCount < res.count) {
       addColor = '#00A6D6';
     }
@@ -80,6 +83,26 @@ Page({
     this.onLoad(data);
     console.log("add触发事件结束：", data);
 
+    var that = this;
+    var carNo = that.data.carNo;
+    var parkNo = that.data.parkNo;
+    console.log("车牌号：", carNo);
+    console.log("停车场编号：", parkNo);
+    console.log("月份：", currCount);
+    wx.request({ //获取起始和截止时间
+      url: app.globalData.url + '/car/weixin/carNo/' + encodeURI(carNo) + '/parkNo/' + encodeURI(parkNo) + '/count/' +  currCount,
+      method: 'GET',
+      data: {},
+      header: {
+        "content-type": 'application/x-www-form-urlencoded'
+      },
+      success: function(e) {
+        console.log("获取起始和截止时间：", e.data.data);
+        that.setData({
+          carMember: e.data.data,
+        })
+      }
+    })
   },
   minus(event) {
     var data = event.target.dataset;
@@ -95,8 +118,28 @@ Page({
       data.currPrice = currPrice;
       this.onLoad(data);
       console.log("minus触发事件结束：", data);
-    }
 
+      var that = this;
+      var carNo = that.data.carNo;
+      var parkNo = that.data.parkNo;
+      console.log("车牌号：", carNo);
+      console.log("停车场编号：", parkNo);
+      console.log("月份：", currCount);
+      wx.request({
+        url: app.globalData.url + '/car/weixin/carNo/' + encodeURI(carNo) + '/parkNo/' + encodeURI(parkNo) + '/count/' + currCount,
+        method: 'GET',
+        data: {},
+        header: {
+          "content-type": 'application/x-www-form-urlencoded'
+        },
+        success: function (e) {
+          console.log("获取起始和截止时间：", e.data.data);
+          that.setData({
+            carMember: e.data.data,
+          })
+        }
+      })
+    } 
   },
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e);

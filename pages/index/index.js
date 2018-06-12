@@ -17,7 +17,8 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  // onLoad: function () {//返回按钮不触发更新
+  onShow() {//返回按钮触发更新
     wx.setNavigationBarTitle({
       title: '您的车牌号'
     })

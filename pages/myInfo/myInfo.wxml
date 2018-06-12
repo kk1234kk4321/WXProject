@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="container-item">
+    <view class="plateNum-item" style='background:#BEE6F2;height:50px;line-height:54px;'>
+      <view class="plateNum-text">个人信息</view>
+    </view>
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab" style="padding-left:5%;">OPENID</view>
+        <view class="item-descr" style="padding-right:3%;"></view>
+    </view>
+
+    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab" style="padding-left:3%;width:10%"></view>
+        <view class="item-descr" style="padding-right:3%;width:90%">{{openid}}</view>
+    </view>
+
+  </view>
+
+</view>

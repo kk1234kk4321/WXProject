@@ -1,0 +1,10 @@
+<view class="container">
+<view wx:if="{{array!=''}}">
+  <view class="container-item">
+    <view class="item" wx:for="{{array}}" wx:for-index="idx" wx:for-item="item">
+      <view style="font-size:16px;color:#000;text-align:center;width:100%;" bindtap="parkManage" data-park-no="{{item.parkNo}}">{{item.parkName}}</view>
+    </view>
+  </view>
+</view>
+<view style='margin:40px 20px 5px 80px;color:#888888;' wx:else>您当前还没有停车场信息</view>
+</view>

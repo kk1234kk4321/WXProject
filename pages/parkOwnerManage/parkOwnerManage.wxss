@@ -1,0 +1,8 @@
+/**index.wxss**/
+.container {
+  flex:1;
+  line-height:1.5;
+  font-size:15px ;
+  background-color:white;
+  /* margin-top:10px; */
+} 

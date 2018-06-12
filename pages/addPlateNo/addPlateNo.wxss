@@ -6,11 +6,17 @@
 }  
 .tel{   
     background-color:white;
-    margin-top:10px;
-    height:80rpx;
+    width: 76%;
+    height: 36px;
+    margin: 10px auto 0 auto;
     padding-top: 10px;
-    padding-left: 30px;
-}  
+} 
+input {
+  border: 2px #00A6D6 solid;
+  border-radius: 4px;
+  height: 36px;
+  padding-left: 6px;
+} 
 .chepai{  
     height: 200rpx;  
     line-height:200rpx;  
