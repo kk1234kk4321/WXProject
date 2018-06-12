@@ -25,5 +25,11 @@ Page({
     wx.navigateTo({
       url: '/pages/updateFeeInfo/updateFeeInfo?parkNo=' + this.data.parkNo
     })
+  },
+  audit:function(){
+    console.log("准备进入白名单审核页面===", this.data);
+    wx.navigateTo({
+      url: '/pages/auditInfo/auditInfo?parkNo=' + this.data.parkNo
+    })
   }
 })

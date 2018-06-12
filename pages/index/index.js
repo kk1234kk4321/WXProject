@@ -120,6 +120,8 @@ Page({
         console.log("array[i].authorty==", array[i].authorty);
         if (array[i].authorty == "ROLE_PARK_OWNER") {
           app.globalData.authorty = 1;
+        }else{
+          app.globalData.authorty = 0;
         }
       }
     }
