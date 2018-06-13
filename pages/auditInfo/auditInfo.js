@@ -15,9 +15,8 @@ Page({
   onShow() {
     var that = this
     var parkNo = that.data.parkNo
-    var openId = app.globalData.openId
     wx.request({
-      url: app.globalData.url + '/park/applyCarList/openid/'+openId+'/parkNo/' + parkNo,
+      url: app.globalData.url + '/park/applyCarList/parkNo/' + parkNo,
       method: 'GET',
       data: {},
       header: {

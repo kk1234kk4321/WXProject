@@ -57,8 +57,9 @@ App({
     userInfo: null,
     plateNums:null,
     openId:null,
-    //url:'http://localhost'
-    url:'http://192.168.1.113'
+    authorty:0,
+    url:'http://localhost:8080'
+    //url:'http://192.168.1.113'
     // url:'https://park.zhangyuanzhineng.com'
   },
   getPlateNums(openid){

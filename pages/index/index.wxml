@@ -22,7 +22,7 @@
     <view style="padding-top:10px;" >
       <button size="default" type="default" bindtap="myinfo" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >我的主页</button>
     </view>
-    <view style="padding-top:10px;" wx:if="{{authorty==1}}">
+    <view style="padding-top:10px;" wx:if="{{authorty==1||authorty==2}}">
       <button size="default" type="default" bindtap="parkManage" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >停车场管理</button>
     </view>
   </view>

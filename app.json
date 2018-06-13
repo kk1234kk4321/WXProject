@@ -14,7 +14,8 @@
     "pages/updateFeeInfo/updateFeeInfo",
     "pages/parkOwnerManage/parkOwnerManage",
     "pages/myInfo/myInfo",
-    "pages/auditInfo/auditInfo"
+    "pages/auditInfo/auditInfo",
+    "pages/parkingManage/parkingManage"
   ],
   "window": {
     "backgroundTextStyle": "light",
