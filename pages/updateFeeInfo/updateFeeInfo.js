@@ -69,6 +69,11 @@ Page({
       success: function (res) {
         console.log("调用修改计费规则接口成功")
         console.log("array====>", res)
+        wx.showToast({
+          title: '保存成功',
+          icon: 'success',
+          duration: 2000
+        })
         wx.navigateTo({
           url: '/pages/index/index',
           success: function (res) {

@@ -179,5 +179,10 @@ Page({
   focus:function(e){
     console.log("收起键盘。。。")
     wx.hideKeyboard();
+  },
+  onLoad: function() {
+    wx.setNavigationBarTitle({
+      title: '添加新车牌',
+    })
   }
 })

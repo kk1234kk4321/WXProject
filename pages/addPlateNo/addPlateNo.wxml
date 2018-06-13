@@ -1,22 +1,22 @@
 <view class="container"> 
-            <!--<view class="tel"  bindtap="d1">
-              <input type="text" placeholder="请输入完整的车牌号，如沪AS..." name="plateNum"  placeholder-style="font-size:15px;color:#DDDDDD;" value='{{carNo}}' bindfocus="focus"/>
-            </view> -->
-            <view class="tel"  bindtap="d1">
-              <text style='font-size:18px;color:#0000AA;padding-right:10px;'>请输入车牌号:</text>{{carNo}}
-            </view>   
-     <!-- 省 -->  
-     <view class="provinces" hidden='{{hidden1}}'>  
-            <view class="pro_li lf" wx:for="{{item1}}" bindtap='sheng' data-sh="{{item}}">{{item}}</view>  
-             
-            <view class="pro_close lf" bindtap='d2'>关闭</view>     
-     </view>  
-     <!-- 号码  -->  
-     <view class="keyNums" hidden='{{hidden2}}'>  
-            <view class="pro_li lf" wx:for="{{item2}}" bindtap='other' data-ot="{{item}}">{{item}}</view>  
-            <view class="bot">  
-                <view class="pro_ok lf" bindtap='ok'>OK</view>  
-                <view class="pro_d lf" bindtap='del'>Del</view>  
-            </view>     
-     </view>   
+  <!--<view class="tel"  bindtap="d1">
+    <input type="text" placeholder="请输入完整的车牌号，如沪AS..." name="plateNum"  placeholder-style="font-size:15px;color:#DDDDDD;" value='{{carNo}}' bindfocus="focus"/>
+  </view> -->
+  <view class="tel"  bindtap="d1">
+    <!-- <text style='font-size:18px;color:#0000AA;padding-right:10px;'>请输入车牌号:</text>{{carNo}}  -->
+    <input type="text" placeholder="请输入车牌号" value="{{carNo}}" disabled="disabled" />
+  </view>   
+  <!-- 省 -->  
+  <view class="provinces" hidden='{{hidden1}}'>  
+    <view class="pro_li lf" wx:for="{{item1}}" bindtap='sheng' data-sh="{{item}}">{{item}}</view>      
+    <view class="pro_close lf" bindtap='d2'>关闭</view>     
+  </view>  
+  <!-- 号码  -->  
+  <view class="keyNums" hidden='{{hidden2}}'>  
+    <view class="pro_li lf" wx:for="{{item2}}" bindtap='other' data-ot="{{item}}">{{item}}</view>  
+    <view class="bot">  
+        <view class="pro_ok lf" bindtap='ok'>OK</view>  
+        <view class="pro_d lf" bindtap='del'>Del</view>  
+    </view>     
+  </view>   
 </view>  
