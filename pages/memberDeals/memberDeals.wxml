@@ -1,23 +1,33 @@
 <form bindsubmit="formSubmit" >
 <view class='container'>
-  <view class='container-item'>{{carNo}}</view>
+  <view class='item' style="height:50px;line-height:50px;">
+    <view class="" style="width:40%;padding-left:30px;color:#716F6A;">{{carNo}}</view>
+    <view class="" style="width:60%;text-align:right;padding-right:30px;font-size:17px;">{{applyCar.parkName}}</view>
+  </view>
+
+  <view class="external">外部用户</view>
+
+  <view style="padding-top:6px;padding-left:30px;padding-right:30px;color:#686661;font-size:14px;">
+    <label style="color:#FF972E;">收费标准：</label>{{applyCar.freeHour}}小时内免费，超过{{applyCar.freeHour}}小时按{{applyCar.feeHour}}元/小时收费，24小时内不超过{{applyCar.feeTop}}元，按{{applyCar.feeMonth}}元/月收费。
+  </view>
+
   <view class='item' style="margin-top:20px;">
-    <view class='item-lab' style='width:40%;padding-top:5px;letter-spacing:2px;'>包月时长</view>
-    <view class='item-descr' style="padding:0px;">
-      <view style="width:80%;border:2px #00A6D6 solid;border-radius:4px;">
-        <view class="iconfont icon-jian" style="width:26%;float:left;border-right:1px #00A6D6 solid;text-align:center;font-size:1.5rem;color:{{minusColor}}" data-curr-count="{{currCount}}" 
+    <view class='item-lab' style='width:36%;padding-top:5px;letter-spacing:2px;'>包月时长</view>
+    <view class='item-descr' style="width:64%;padding:0px;">
+      <view style="width:82%;border:2px #00A6D6 solid;border-radius:4px;">
+        <view class="iconfont icon-jian" style="width:27%;float:left;border-right:1px #00A6D6 solid;text-align:center;font-size:1.5rem;color:{{minusColor}}" data-curr-count="{{currCount}}" 
         data-price="{{price}}" 
         data-curr-price="{{currPrice}}" 
         data-car-no="{{carNo}}" data-park-no="{{parkNo}}" bindtap="minus"></view>
-        <view style="width:46%;float:left;padding-top:8px;text-align:center">
+        <view style="width:44%;float:left;padding-top:8px;text-align:center">
           <input name="count" value="{{currCount}}" disabled="false"></input>
         </view>
-        <view class="iconfont icon-jia" style="width:26%;float:left;border-left:1px #00A6D6 solid;font-size:1.5rem;text-align:center;color:{{addColor}}" data-curr-count="{{currCount}}" 
+        <view class="iconfont icon-jia" style="width:27%;float:left;border-left:1px #00A6D6 solid;font-size:1.5rem;text-align:center;color:{{addColor}}" data-curr-count="{{currCount}}" 
         data-price="{{price}}" 
         data-curr-price="{{currPrice}}" 
         data-car-no="{{carNo}}" data-park-no="{{parkNo}}" bindtap="add"></view>
       </view>
-      <view style="padding-left:5px;text-align:right">月</view>
+      <view style="width:18%;text-align:right;padding-right:30px;">月</view>
     </view>
   </view>
 </view>
@@ -31,18 +41,18 @@
   </view>
 </view>
 
-<view class="container-applyCar" style="background-color:#BEE6F2;width:100%;height:50px;line-height:50px;margin-top:20px;">
-  <view style="width:60%;float:left;"><view style="padding-left:30px;">申请通行证</view></view>
-  <view style="width:40%;float:left;text-align:right;font-size:15px;" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" wx:if="{{applyCar.status=='1'}}">
-    <view style="padding-right:30px;color:#716F6A;">申请中</view>
+<view class="container-applyCar">
+  <view style="width:60%;float:left;"><view style="padding-left:30px;">内部用户</view></view>
+  <view class="applyCar" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" wx:if="{{applyCar.status=='1'}}">
+    <view class="status">申请中</view>
   </view>
-  <view style="width:40%;float:left;text-align:right;font-size:15px;" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" wx:elif="{{applyCar.status=='2'}}">
-    <view style="padding-right:30px;color:#716F6A;">审核通过</view>
+  <view class="applyCar" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" wx:elif="{{applyCar.status=='2'}}">
+    <view class="status">审核通过</view>
   </view>
-  <view style="width:40%;float:left;text-align:right;font-size:15px;" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" wx:elif="{{applyCar.status=='3'}}">
-    <view style="padding-right:30px;color:#716F6A;">审核未通过</view>
+  <view class="applyCar" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" wx:elif="{{applyCar.status=='3'}}">
+    <view class="status">审核未通过</view>
   </view>
-  <view bindtap="applyCar" style="width:40%;float:left;text-align:right;font-size:15px;" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" wx:else>
+  <view bindtap="applyCar" class="applyCar" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" wx:else>
     <view style="padding-right:30px;color:#00A7D6;">申请</view>
   </view>
 </view>
@@ -54,6 +64,6 @@
     <view><input name="dealsFee" value="{{currPrice}}" style="width:65px;font-size:20px;color:#FF972E;padding-top:13px;" disabled="false"></input></view>
   </view>
   <button type="default"  bindtap="default" style="width:30%;height:50px;line-height:50px;float:left;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border:none;border-radius:0px;" data-price="{{price}}" 
-  data-car-no="{{carNo}}" data-park-no="{{parkNo}}" form-type="submit">充值</button>
+  data-car-no="{{carNo}}" data-park-no="{{parkNo}}" form-type="submit">付费</button>
 </view>
 </form>

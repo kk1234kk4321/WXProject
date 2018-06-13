@@ -4,7 +4,7 @@
   </view> -->
   <view class="tel"  bindtap="d1">
     <!-- <text style='font-size:18px;color:#0000AA;padding-right:10px;'>请输入车牌号:</text>{{carNo}}  -->
-    <input type="text" placeholder="请输入车牌号" value="{{carNo}}" />
+    <input type="text" placeholder="请输入车牌号" value="{{carNo}}" disabled="disabled" />
   </view>   
   <!-- 省 -->  
   <view class="provinces" hidden='{{hidden1}}'>  

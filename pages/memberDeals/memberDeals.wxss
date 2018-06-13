@@ -5,12 +5,11 @@
   /* margin-top:10px; */
 } 
 
-.container-item{
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 30px;
-  border-bottom: 1px solid #BEE6F2 ;
-  color: #716F6A;
+.external {
+  background-color:#BEE6F2;
+  height:50px;
+  line-height:50px;
+  padding-left:30px;
 }
 
 .radio-group{
@@ -70,3 +69,22 @@ radio{
   flex:1;
 }
 
+.container-applyCar {
+   background-color:#BEE6F2;
+   width:100%;
+   height:50px;
+   line-height:50px;
+   margin-top:20px;
+}
+
+.applyCar {
+  width:40%;
+  float:left;
+  text-align:right;
+  font-size:15px;
+}
+
+.status {
+  padding-right:30px;
+  color:#716F6A;
+}
