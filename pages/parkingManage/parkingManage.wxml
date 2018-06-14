@@ -1,8 +1,8 @@
 <view class="container">
     <view class="container-item">
         <view class="plateNum-item" style='background:#BEE6F2;height:50px;line-height:54px;'>
-          <view class="plateNum-text">车牌号</view>
-          <view class="plateNum-text">进场时间</view>
+          <view class="plateNum-text" style="padding-left:20px;">车牌号</view>
+          <view class="plateNum-text" style="padding-left:20%;">进场时间</view>
         </view>
 
         <view wx:if="{{array!=''}}">
