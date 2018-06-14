@@ -1,9 +1,13 @@
 <view class="container">
-  <view style="padding-top:20px;">
+  <view style="padding-top:20px;" wx:if="{{authorty==1}}">
     <button size="default" type="default" bindtap="updateFee" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >计费规则修改</button>
   </view>
 
-  <view style="padding-top:20px;">
-    <button size="default" type="default" bindtap="audit" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >白名单审核</button>
+  <view style="padding-top:20px;" wx:if="{{authorty==1}}">
+      <button size="default" type="default" bindtap="audit" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >白名单审核</button>
+  </view>
+
+  <view style="padding-top:20px;" wx:if="{{authorty==1||authorty==2}}">
+      <button size="default" type="default" bindtap="parking" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >在停车辆管理</button>
   </view>
 </view>

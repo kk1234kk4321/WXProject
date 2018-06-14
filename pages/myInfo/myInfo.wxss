@@ -42,7 +42,7 @@
 }
 
 .item-lab{
-  font-size:15px;
+  font-size:17px;
   color:#86837E;
   width: 30%;
   padding-left:6%;
@@ -52,7 +52,7 @@
 .item-descr{
   text-align:right;
   align-items: center;
-  font-size:15px;
+  font-size:17px;
   width: 70%;
   padding-right:6%;
   /* padding-right: 20px; */

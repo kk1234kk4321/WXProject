@@ -17,8 +17,7 @@ Page({
       url: '../logs/logs'
     })
   },
-  // onLoad: function () {//返回按钮不触发更新
-  onShow() {//返回按钮触发更新
+  onLoad: function () {
     wx.setNavigationBarTitle({
       title: '您的车牌号'
     })
@@ -31,7 +30,7 @@ Page({
       console.log("else====", app.globalData.openId)
       wx.login({
         success: res => {
-          console.log("res.code ====>", res.code)
+          console.log("res.code ====>", res)
           // 发送 res.code 到后台换取 openId, sessionKey, unionId
           var that = this;
           if (res.code) {
@@ -121,6 +120,9 @@ Page({
         console.log("array[i].authorty==", array[i].authorty);
         if (array[i].authorty == "ROLE_PARK_OWNER") {
           app.globalData.authorty = 1;
+          break;
+        } else if (array[i].authorty == "ROLE_PARK_STAFF"){
+          app.globalData.authorty = 2;
         }else{
           app.globalData.authorty = 0;
         }
