@@ -17,7 +17,8 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  // onLoad: function () {
+  onShow() {
     wx.setNavigationBarTitle({
       title: '您的车牌号'
     })
