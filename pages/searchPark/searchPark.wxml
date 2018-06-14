@@ -16,7 +16,7 @@
             <view style="padding-left:20px;">{{info.parkName}}</view>
           </view>
           <view style="width:26%;float:left;text-align:right;font-size:15px;color:#6E6C69;">车位剩余：</view> 
-          <view style="width:14%;float:left;text-align:right;font-size:15px;color:#6E6C69;">
+          <view style="width:14%;float:left;text-align:right;font-size:15px;color:#F6912B;">
             <view style="padding-right:20px;">{{info.carTotal}}</view>
           </view> 
         </view>
