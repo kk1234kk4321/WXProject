@@ -23,7 +23,7 @@ input {
 }  
 .provinces{  
     overflow: hidden;  
-    background-color: #CED3D9;  
+    background-color: white;  
     padding:30rpx 0;  
     position: absolute;  
     bottom: 0;  
@@ -31,20 +31,21 @@ input {
     z-index: 10000;  
 }  
 .pro_li{  
-    font-size: 36rpx;  
+    font-size: 42rpx;  
     height: 70rpx;  
     width: 70rpx;  
     line-height: 70rpx;  
     text-align: center;  
     border: 2rpx solid #ddd;  
     margin: 5rpx;  
-    background-color:#fff;   
+    background-color:#BEE6F2; 
+    color:#00A7D6;  
 }  
 .pro_close{  
     width: 100rpx;  
     height: 70rpx;  
     line-height: 70rpx;  
-    font-size: 32rpx;  
+    font-size: 40rpx;  
     text-align: center;  
     background-color: #00A6D6;  
     border: 2rpx solid #ddd;  
@@ -64,7 +65,7 @@ input {
 }  
 .keyNums{  
     overflow: hidden;  
-    background-color: #CED3D9;  
+    background-color: white;  
     padding:30rpx 0;  
     position: absolute;  
     bottom: 0;  
@@ -75,7 +76,7 @@ input {
     width: 100rpx;  
     height: 70rpx;  
     line-height: 70rpx;  
-    font-size: 32rpx;  
+    font-size: 40rpx;  
     text-align: center;  
     background-color: #00A6D6;  
     border: 2rpx solid #ddd;  
@@ -87,7 +88,7 @@ input {
     width: 100rpx;  
     height: 70rpx;  
     line-height: 70rpx;  
-    font-size: 32rpx;  
+    font-size: 40rpx;  
     text-align: center;  
     background-color: #00A6D6;  
     border: 2rpx solid #ddd;  
