@@ -25,7 +25,7 @@ Page({
    */
   onShow: function () {
     wx.setNavigationBarTitle({
-      title: '我的主页',
+      title: '个人主页',
     })
 
     var that = this;
@@ -82,46 +82,12 @@ Page({
   },
 
   /**
-   * 监听文本框输入
+   * 设置昵称
    */
-  nicknameInput: function(e) {
-    var nickname = e.detail.value;
-    this.setData({
-      nickname: nickname
+  setNickname: function(e) {
+    console.log("进入设置昵称页面！");
+    wx.navigateTo({
+      url: '/pages/setNickname/setNickname'
     })
-  },
-
-  /**
-   * 修改用户昵称
-   */
-  updateNickname: function(e) {
-    console.log("修改用户昵称啦...");
-    var that = this;
-    var openId = app.globalData.openId;
-    var nickname = that.data.nickname;
-    console.log("昵称：", nickname);
-    
-    if(nickname != "" && nickname != null) {
-      wx.request({
-        url: app.globalData.url + '/car/weixin/openId/' + encodeURI(openId) + '/nickname/' + encodeURI(nickname),
-        method: 'GET',
-        data: {},
-        header: {
-          "content-type": 'application/x-www-form-urlencoded'
-        },
-        success: function (res) {
-          console.log("啦啦啦!!!");
-          console.log("mes：", res.data.data);
-          that.setData({
-            mes: res.data.data.mes
-          })
-        }
-      })
-    } else {
-      console.log("请设置您的昵称！");
-      that.setData({
-        mes: '请设置您的昵称！'
-      })
-    }
   }
 })

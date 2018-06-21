@@ -23,7 +23,7 @@ input {
 }  
 .provinces{  
     overflow: hidden;  
-    background-color: white;  
+    background-color: #D5D4D4;  
     padding:30rpx 0;  
     position: absolute;  
     bottom: 0;  
@@ -32,40 +32,42 @@ input {
 }  
 .pro_li{  
     font-size: 42rpx;  
-    height: 70rpx;  
     width: 70rpx;  
-    line-height: 70rpx;  
+    height: 90rpx;  
+    line-height: 90rpx;  
     text-align: center;  
     border: 2rpx solid #ddd;  
+    border-radius: 6px;
     margin: 5rpx;  
-    background-color:#BEE6F2; 
-    color:#00A7D6;  
+    background-color:#FFF;  
 }  
 .pro_close{  
     width: 100rpx;  
-    height: 70rpx;  
-    line-height: 70rpx;  
+    height: 90rpx;  
+    line-height: 90rpx;  
     font-size: 40rpx;  
     text-align: center;  
-    background-color: #00A6D6;  
+    background-color: #0000FF;  
     border: 2rpx solid #ddd;  
+    border-radius: 6px;
     margin: 5rpx ;  
-    color:white;
+    color:#FFF;
 }  
 .pro_del{  
     width: 100rpx;  
-    height: 70rpx;  
-    line-height: 70rpx;  
+    height: 90rpx;  
+    line-height: 90rpx;  
     font-size: 32rpx;  
     text-align: center;  
-    background-color: #00A6D6;  
-    border: 2rpx solid #ddd;  
+    background-color: #0000FF;  
+    border: 2rpx solid #ddd; 
+    border-radius: 6px; 
     margin: 5rpx;  
-    color:white;
+    color:#FFF;
 }  
 .keyNums{  
     overflow: hidden;  
-    background-color: white;  
+    background-color: #D5D4D4;  
     padding:30rpx 0;  
     position: absolute;  
     bottom: 0;  
@@ -74,24 +76,26 @@ input {
 }  
 .pro_ok{  
     width: 100rpx;  
-    height: 70rpx;  
-    line-height: 70rpx;  
+    height: 90rpx;  
+    line-height: 90rpx;  
     font-size: 40rpx;  
     text-align: center;  
-    background-color: #00A6D6;  
+    background-color: #0000FF;  
     border: 2rpx solid #ddd;  
+    border-radius: 6px;
     margin: 5rpx ;  
-    color:white;
+    color:#FFF;
     /* margin-left: 35%; */  
 }  
 .pro_d{  
     width: 100rpx;  
-    height: 70rpx;  
-    line-height: 70rpx;  
+    height: 90rpx;  
+    line-height: 90rpx;  
     font-size: 40rpx;  
     text-align: center;  
-    background-color: #00A6D6;  
-    border: 2rpx solid #ddd;  
+    background-color: #0000FF;  
+    border: 2rpx solid #ddd;
+    border-radius: 6px;  
     margin: 5rpx;
-    color:white;  
+    color:#FFF;  
 }

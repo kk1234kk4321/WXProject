@@ -1,32 +1,12 @@
 <view class="container">
   <view class="container-item">
-    <view class="plateNum-item" style='background:#BEE6F2;height:50px;line-height:54px;'>
-      <view class="plateNum-text">个人信息</view>
+    <view class="nickname-item" wx:if="{{nickname == '' || nickname == null}}">
+      <view class="nickname-text" style="color:#716F6B;">您还没有昵称</view>
+      <view style="color:#00A7D6;" bindtap="setNickname">设置昵称</view>
     </view>
-
-     <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
-        <view style="padding-left:5%;color:#86837E;font-size:17px;">OPENID</view>
+    <view wx:else>
+      <view class="showNickname">{{nickname}}</view>
+      <view class="tip">昵称不可再次修改</view>
     </view>
-    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
-        <view style="padding-left:9%;font-size:14px;"><text selectable='true'>{{openid}}</text></view>
-    </view> 
-        
-    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
-        <view style="padding-left:5%;color:#86837E;font-size:17px;">昵称</view>
-    </view>
-    <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;">
-        <view style="padding-left:9%;font-size:14px;width:75%;">
-          <input type="text" bindinput="nicknameInput" name="nickname" style="padding-left:8px;margin-top:4px;border:1px #CFCFCF solid;" value="{{nickname}}" placeholder="请输入您的昵称" maxlength="30" />
-        </view>
-        <view class="item-btn" style="width:25%;color:#00A7D6;padding-right:6%;align-items:center;text-align:right;" bindtap="updateNickname">
-          确定
-        </view> 
-    </view>
-    
-    <view style="width:94%;margin:0 auto;color:red;font-size:14px;" wx:if="{{mes!=''}}">
-      <view style="padding-left:9%;">* {{mes}}</view>
-    </view>
-
   </view>
-
 </view>

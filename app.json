@@ -15,7 +15,8 @@
     "pages/parkOwnerManage/parkOwnerManage",
     "pages/myInfo/myInfo",
     "pages/auditInfo/auditInfo",
-    "pages/parkingManage/parkingManage"
+    "pages/parkingManage/parkingManage",
+    "pages/setNickname/setNickname"
   ],
   "window": {
     "backgroundTextStyle": "light",

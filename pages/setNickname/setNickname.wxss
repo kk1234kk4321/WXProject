@@ -1,0 +1,35 @@
+/* pages/setNickname/setNickname.wxss */
+.container {
+  margin-top: 20px;
+}
+
+.container-item {
+  width: 86%; 
+  margin: 0 auto;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: row;
+}
+
+.input-view {
+   width:80%;
+   float:left;
+   border: 2px #00A6D5 solid;
+   border-radius: 4px;
+}
+
+.nickname {
+  height: 36px;
+  line-height: 36px;
+  padding-left: 8px;
+}
+
+.sureBtn {
+  color:#00A7D6;
+  align-items:center;
+  text-align:right;
+  height:36px;
+  line-height:38px;
+  width:16%;
+  float:right;
+}

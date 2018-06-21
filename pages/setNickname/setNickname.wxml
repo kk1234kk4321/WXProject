@@ -1,0 +1,19 @@
+<view class="container">  
+  <view class="container-item" wx:if="{{nn == ''}}">
+    <view class="input-view">
+      <input class="nickname" type="text" bindinput="nicknameInput" name="nickname" value="{{nickname}}" placeholder="请输入您的昵称" maxlength="30" /> 
+    </view>
+    <view class="sureBtn" bindtap="updateNickname">确定</view>
+  </view>
+
+  <view class="container-item" wx:if="{{nn != ''}}">
+    <view class="input-view">
+      <input class="nickname" type="text" bindinput="nicknameInput" name="nickname" value="{{nickname}}" placeholder="请输入您的昵称" maxlength="30" disabled='disabled' /> 
+    </view> 
+    <view class="sureBtn">确定</view>
+  </view> 
+
+  <view class="container-item" style="color:red;font-size:14px;" wx:if="{{mes!=''}}">
+    * {{mes}}
+  </view>
+</view>

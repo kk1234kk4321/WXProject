@@ -11,19 +11,16 @@
   <view class="container-add" bindtap="addPlateNo">
     <view class="iconfont icon-jia" style="margin:0 auto;color:#4CBFE0;font-size:24px;"></view>
   </view>
-  <view style="text-align:right;padding-right:20px;color:#807D78;">添加新车牌</view>
+  <view style="text-align:right;padding-right:20px;padding-bottom:10px;color:#807D78;">添加新车牌</view>
   <view class="container-others">
-     <view class="others"><image src="../../img/cwyy.png" bindtap="searchPark"></image></view> 
-    <!-- <view class="others"><image src="../../img/cwyy.png"></image></view>  -->
+    <view class="others"><image src="../../img/cwyy.png" bindtap="searchPark"></image></view> 
     <view class="others"><image src="../../img/tcyh.png"></image></view>
     <view class="others"><image src="../../img/cqzw.png" bindtap="rentParkingplace"></image></view>
+    <view class="others"><image src="../../img/wdzy.png" bindtap="myinfo"></image></view>
   </view>
-  <view class="container-item" style='padding-bottom:30px;'>
-    <view style="padding-top:10px;" >
-      <button size="default" type="default" bindtap="myinfo" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >我的主页</button>
-    </view>
-    <view style="padding-top:10px;" wx:if="{{authorty==1||authorty==2}}">
-      <button size="default" type="default" bindtap="parkManage" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >停车场管理</button>
+  <view class="container-others" style="padding-bottom:60px;">
+    <view class="others" wx:if="{{authorty==1||authorty==2}}">
+      <image src="../../img/tccgl.png" bindtap="parkManage"></image>
     </view>
   </view>
   <view class="container-bottom">
