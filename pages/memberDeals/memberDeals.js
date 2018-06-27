@@ -55,7 +55,7 @@ Page({
     var parkNo = that.data.parkNo;
 
     wx.request({
-      url: app.globalData.url + '/car/weixin/carNo/' + encodeURI(carNo) + '/parkNo/' + encodeURI(parkNo),
+      url: app.globalData.url + '/car/weixin/status/openId/' + encodeURI(openId) + '/carNo/' + encodeURI(carNo) + '/parkNo/' + encodeURI(parkNo),
       method: 'GET',
       data: {},
       header: {
