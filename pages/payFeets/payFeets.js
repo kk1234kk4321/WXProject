@@ -28,7 +28,7 @@ Page({
       success: function (res) {
         console.log("调用接口成功")
         console.log("feetsData====>", res)
-        if (res.data != '') {
+        if (res.data.data) {
           that.setData({
             feetsData: res.data.data
           })

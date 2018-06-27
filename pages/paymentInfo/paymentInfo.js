@@ -22,7 +22,7 @@ Page({
       success: function (res) {
         console.log("调用接口成功")
         console.log("在线缴费记录====>", res)
-        if(res.data!=''){
+        if(res.data.data){
           that.setData({
             paymentInfo: res.data.data
           })
