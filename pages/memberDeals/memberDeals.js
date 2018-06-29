@@ -256,6 +256,7 @@ Page({
     var openId = app.globalData.openId; 
     var carNo = e.currentTarget.dataset.carNo;
     var parkNo = e.currentTarget.dataset.parkNo;
+    var price = e.currentTarget.dataset.price;
     console.log("openId：", openId);
     console.log("车牌：", carNo);
     console.log("停车场编号：", parkNo);
@@ -271,9 +272,9 @@ Page({
       success: function(res) {
         console.log("调用接口成功")
         console.log("applyCar====>", res.data.data);
-
+        
         wx.navigateTo({
-          url: '/pages/applyCar/applyCar'
+          url: '/pages/applyCar/applyCar?price=' + price + '&carNo=' + carNo + "&parkNo=" + parkNo
         })
       }
     })
