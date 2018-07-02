@@ -87,8 +87,13 @@ App({
     if(array!=null&&array.length>0){
       for(var i=0;i<array.length;i++){
         console.log("array[i].authorty==", array[i].authorty);
-        if (array[i].authorty =="ROLE_PARK_USER"){
-          that.globalData.authorty = 1;
+        if (array[i].authorty == "ROLE_PARK_ADMIN") {
+          app.globalData.authorty = 1;
+          break;
+        } else if (array[i].authorty == "ROLE_PARK_STAFF") {
+          app.globalData.authorty = 2;
+        } else {
+          app.globalData.authorty = 0;
         }
       }
     }

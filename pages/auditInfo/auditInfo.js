@@ -16,7 +16,7 @@ Page({
     var that = this
     var parkNo = that.data.parkNo
     wx.request({
-      url: app.globalData.url + '/park/applyCarList/parkNo/' + parkNo,
+      url: app.globalData.url + '/park/applyCarList/parkNo/' + parkNo+'/openid/'+app.globalData.openId,
       method: 'GET',
       data: {},
       header: {
@@ -55,7 +55,7 @@ Page({
       success: function (res) {
         console.log("调用白名单审核接口成功")
         console.log("array====>", res)
-        wx.navigateTo({
+        wx.redirectTo({
           url: '/pages/auditInfo/auditInfo?parkNo=' + that.data.parkNo,
           success: function (res) {
             wx.showToast({
