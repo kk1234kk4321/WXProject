@@ -41,17 +41,22 @@ input {
     margin: 5rpx;  
     background-color:#FFF;  
 }  
+
+.pro_li_view{
+  padding-left:20px;
+  padding-right:20px;
+}
+
 .pro_close{  
-    width: 100rpx;  
+    width: 120rpx;  
     height: 90rpx;  
     line-height: 90rpx;  
     font-size: 40rpx;  
     text-align: center;  
-    background-color: #0000FF;  
+    background-color: #FFF;  
     border: 2rpx solid #ddd;  
     border-radius: 6px;
     margin: 5rpx ;  
-    color:#FFF;
 }  
 .pro_del{  
     width: 100rpx;  
@@ -75,27 +80,25 @@ input {
     z-index: 10000;  
 }  
 .pro_ok{  
-    width: 100rpx;  
+    width: 110rpx;  
     height: 90rpx;  
     line-height: 90rpx;  
     font-size: 40rpx;  
     text-align: center;  
-    background-color: #0000FF;  
+    background-color: #FFF;  
     border: 2rpx solid #ddd;  
     border-radius: 6px;
-    margin: 5rpx ;  
-    color:#FFF;
+    margin: 5rpx ; 
     /* margin-left: 35%; */  
 }  
 .pro_d{  
-    width: 100rpx;  
+    width: 110rpx;  
     height: 90rpx;  
     line-height: 90rpx;  
     font-size: 40rpx;  
     text-align: center;  
-    background-color: #0000FF;  
+    background-color: #FFF;  
     border: 2rpx solid #ddd;
     border-radius: 6px;  
     margin: 5rpx;
-    color:#FFF;  
 }
