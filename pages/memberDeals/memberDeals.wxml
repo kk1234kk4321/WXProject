@@ -63,7 +63,6 @@
     <view style="text-align:left;color:#FF972E;font-size:20px;margin-right:4px;">¥</view>
     <view><input name="dealsFee" value="{{currPrice}}" style="width:65px;font-size:20px;color:#FF972E;padding-top:13px;" disabled="false"></input></view>
   </view>
-  <button type="default"  bindtap="default" style="width:30%;height:50px;line-height:50px;float:left;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border:none;border-radius:0px;" data-price="{{price}}" 
-  data-car-no="{{carNo}}" data-park-no="{{parkNo}}" form-type="submit">付费</button>
+  <button type="default"  bindtap="default" style="width:30%;height:50px;line-height:50px;float:left;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border:none;border-radius:0px;" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" form-type="submit">付费</button>
 </view>
 </form>

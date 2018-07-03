@@ -8,15 +8,24 @@
   </view>   
   <!-- 省 -->  
   <view class="provinces" hidden='{{hidden1}}'>  
-    <view class="pro_li lf" wx:for="{{item1}}" bindtap='sheng' data-sh="{{item}}">{{item}}</view>      
-    <view class="pro_close lf" bindtap='d2'>关闭</view>     
+    <view class="pro_li lf" wx:for="{{item1}}" bindtap='sheng' data-sh="{{item}}">{{item}}</view>
+    <view class="pro_li lf" wx:for="{{item11}}" bindtap='sheng' data-sh="{{item}}">{{item}}</view>
+    <view class="pro_li_view"><view class="pro_li lf" wx:for="{{item12}}" bindtap='sheng' data-sh="{{item}}">{{item}}</view></view>
+    <view class="pro_li_view"><view class="pro_li_view"><view class="pro_li lf" wx:for="{{item13}}" bindtap='sheng' data-sh="{{item}}">{{item}}</view></view></view>   
+    <view class="pro_close lf" bindtap='d2'>关闭</view> 
   </view>  
   <!-- 号码  -->  
   <view class="keyNums" hidden='{{hidden2}}'>  
-    <view class="pro_li lf" wx:for="{{item2}}" bindtap='other' data-ot="{{item}}">{{item}}</view>  
+    <view class="pro_li lf" wx:for="{{item2}}" bindtap='other' data-ot="{{item}}">{{item}}</view>
+    <view class="pro_li lf" wx:for="{{item21}}" bindtap='other' data-ot="{{item}}">{{item}}</view>
+    <view class="pro_li_view"><view class="pro_li lf" wx:for="{{item22}}" bindtap='other' data-ot="{{item}}">{{item}}</view></view>
+    <view class="pro_li lf" wx:for="{{item23}}" bindtap='other' data-ot="{{item}}">{{item}}</view>
     <view class="bot">  
-        <view class="pro_ok lf" bindtap='ok'>OK</view>  
-        <view class="pro_d lf" bindtap='del'>Del</view>  
+    <view class="pro_ok lf" bindtap='ok'>确认</view>
+    </view>
+    <view class="pro_li lf" wx:for="{{item24}}" bindtap='other' data-ot="{{item}}">{{item}}</view>  
+    <view class="bot">  
+        <view class="pro_d lf" bindtap='del'><view class="iconfont icon-shuzijianpanshanchu"></view></view>  
     </view>     
   </view>   
 </view>  

@@ -119,7 +119,7 @@ Page({
     if(array!=null&&array.length>0){
       for (var i = 0; i < array.length; i++) {
         console.log("array[i].authorty==", array[i].authorty);
-        if (array[i].authorty == "ROLE_PARK_OWNER") {
+        if (array[i].authorty == "ROLE_PARK_ADMIN") {
           app.globalData.authorty = 1;
           break;
         } else if (array[i].authorty == "ROLE_PARK_STAFF"){
