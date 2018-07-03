@@ -89,5 +89,14 @@ Page({
     wx.navigateTo({
       url: '/pages/setNickname/setNickname'
     })
+  },
+
+  /**
+   * 返回
+   */
+  returnBtn: function(e) {
+    wx.navigateTo({
+      url: '/pages/index/index',
+    })
   }
 })

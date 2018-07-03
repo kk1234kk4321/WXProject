@@ -9,4 +9,6 @@
       <view class="tip">昵称不可再次修改</view>
     </view>
   </view>
+
+  <view class="pos-fixed" bindtap="returnBtn">返回</view>
 </view>
