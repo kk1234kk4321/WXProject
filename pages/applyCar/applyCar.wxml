@@ -1,8 +1,8 @@
 <view class="container">
-  <view style="margin-top:40px;text-align:center;color:#888888;font-size:15px;">
+  <view class="container-item">
     您已申请通行证，需要审核？请耐心等候...
   </view>
-  <view bindtap="returnBtn" style="margin-top:40px;text-align:center;height:40px;line-height:40px;background:#BEE6F2;color:#00A7D6;font-size:17px;" >
+  <view class="pos-fixed" bindtap="returnBtn">
     返回
   </view>
 </view>

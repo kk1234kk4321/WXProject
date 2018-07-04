@@ -77,5 +77,14 @@ Page({
         mes: '请设置您的昵称！'
       })
     }
+  },
+
+  /**
+   * 返回
+   */
+  returnBtn: function(e) {
+    wx.navigateTo({
+      url: '/pages/index/index',
+    })
   }
 })
