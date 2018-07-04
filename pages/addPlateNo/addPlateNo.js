@@ -143,7 +143,7 @@ Page({
         success: function (res) {
           console.log("调用接口成功")
           console.log("res.data====>",res)
-          wx.navigateTo({
+          wx.redirectTo({
             url: '/pages/index/index',
             success: function (res) {
               wx.showToast({
@@ -165,7 +165,7 @@ Page({
         }
       })
     }else{  
-      wx.navigateTo({
+      wx.redirectTo({
         url: '/pages/addPlateNo/addPlateNo',
         success: function (res) {
           wx.showToast({
