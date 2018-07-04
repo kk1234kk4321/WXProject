@@ -13,7 +13,7 @@ Page({
   },
   //事件处理函数
   bindViewTap: function () {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../logs/logs'
     })
   },
@@ -89,14 +89,14 @@ Page({
   },
   addPlateNo: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/addPlateNo/addPlateNo'
     })
   },
   payFeets: function (e) {
     var plateNum = e.currentTarget.dataset.plateNum;
     console.log('当前车牌号为', plateNum);
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/payFeets/payFeets?plateNum=' + plateNum
     })
   },
@@ -104,14 +104,14 @@ Page({
     var plateNum = "carNo";
     console.log("欢迎来停车场搜索页面");
     //console.log(e);
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/searchPark/searchPark?plateNum=' + plateNum
     })
   },
   //长期租位
   rentParkingplace: function (e) {
     console.log("进入长期租位页面");
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/rentParkingplace/rentParkingplace',
     })
   },
@@ -131,12 +131,12 @@ Page({
     }
   },
   parkManage:function(e){
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/parkManage/parkManage'
     })
   },
   myinfo:function(){
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/myInfo/myInfo'
     })
   }

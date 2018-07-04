@@ -46,7 +46,7 @@ Page({
   paymentInfo:function(e){
     var plateNum = e.currentTarget.dataset.plateNum;
     console.log('查看缴费记录，车牌号为', e.currentTarget.dataset);
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/paymentInfo/paymentInfo?plateNum=' + plateNum
     })
   },
@@ -61,7 +61,7 @@ Page({
     var price = e.currentTarget.dataset.price;
     var carNo = e.currentTarget.dataset.carNo;
     var parkNo = e.currentTarget.dataset.parkNo;
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/memberDeals/memberDeals?price=' + price+'&carNo='+carNo+'&parkNo='+parkNo+'&currCount=0&currPrice=0' ,
     })
   },
