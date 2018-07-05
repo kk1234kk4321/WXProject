@@ -1,7 +1,10 @@
 <view class="container">
   <view class="container-item">
+  <view wx:if="{{plateNums!=null&&plateNums.length>0}}">
     <view class="item" wx:for="{{plateNums}}" wx:for-index="idx" wx:for-item="item">
       <view style="font-size:16px;color:#000;text-align:center;width:100%;" bindtap="selectPark" data-plate-num="{{item.carNo}}">{{item.carNo}}</view>
     </view>
+  </view>
+  <view style='margin:40px 20px 5px 80px;color:#888888;' wx:else>您当前还没有长期租位信息</view>
   </view>
 </view>
