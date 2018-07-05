@@ -1,13 +1,13 @@
 <view class="container">
   <view class="container-item">
     <view class="nickname-item" wx:if="{{nickname == '' || nickname == null}}">
-      <view class="nickname-text" style="color:#716F6B;">您还没有昵称</view>
-      <view style="color:#00A7D6;" bindtap="setNickname">设置昵称</view>
+      <view class="nickname-text">您还没有昵称</view>
+      <view class="setNickname" bindtap="setNickname">设置昵称</view>
     </view>
     <view wx:else>
       <view class="showNickname">{{nickname}}</view>
-      <view class="tip">昵称不可再次修改</view>
     </view>
+    <view class="tip">昵称不可再次修改</view>
   </view>
 
   <view class="pos-fixed" bindtap="returnBtn">返回</view>

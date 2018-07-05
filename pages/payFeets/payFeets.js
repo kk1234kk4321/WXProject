@@ -185,7 +185,7 @@ Page({
       success: function (res) {
         console.log("调用解除绑定接口成功")
         console.log("res.data====>", res)
-        wx.redirectTo({
+        wx.reLaunch({
           url: '/pages/index/index',
           success: function (res) {
             wx.showToast({

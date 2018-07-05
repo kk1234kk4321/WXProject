@@ -34,7 +34,7 @@ Page({
     var parkNo = this.data.parkNo;
     var price = this.data.price;
     
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/memberDeals/memberDeals?price=' + price + '&carNo=' + carNo + '&parkNo=' + parkNo + '&currCount=0&currPrice=0',
     })
   }

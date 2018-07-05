@@ -83,8 +83,8 @@ Page({
    * 返回
    */
   returnBtn: function(e) {
-    wx.navigateTo({
-      url: '/pages/index/index',
+    wx.redirectTo({
+      url: '/pages/myInfo/myInfo',
     })
   }
 })
