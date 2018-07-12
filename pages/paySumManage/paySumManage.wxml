@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="container-item">
+      <view class="plateNum-text">停车收益</view>
+      <view class="plateNum-item" >
+        <view class="item-lab" style="color:#86837E">日期</view>
+        <view class="item-descr" style="color:#86837E">收益</view>
+      </view>
+
+      <view wx:if="{{array1!=''&&array1!=null&&array1.length>0}}">
+        <view class="item" wx:for="{{array1}}" wx:for-index="idx" wx:for-item="item">
+          <view class="item-lab">{{item.payDate}}</view>
+          <view class="item-descr">{{item.payFee}}元</view>
+        </view>  
+      </view>
+      <view style='margin:20px 20px 20px 20px;font-size:13px;' wx:else>您当前还没有停车收益信息</view>    
+
+      <view class="plateNum-text">长期租位收益</view>
+      <view class="plateNum-item" >
+        <view class="item-lab" style="color:#86837E">日期</view>
+        <view class="item-descr" style="color:#86837E">收益</view>
+      </view>
+
+      <view wx:if="{{array2!=''&&array2!=null&&array2.length>0}}">
+        <view class="item" wx:for="{{array2}}" wx:for-index="idx" wx:for-item="item">
+          <view class="item-lab" >{{item.payDate}}</view>
+          <view class="item-descr" >{{item.payFee}}元</view>
+        </view>  
+      </view>
+      <view style='margin:20px 20px 20px 20px;font-size:13px;' wx:else>您当前还没有长期租位收益信息</view>    
+    </view>
+</view>

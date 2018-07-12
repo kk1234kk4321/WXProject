@@ -82,5 +82,13 @@ Page({
     wx.navigateTo({
       url: '/pages/searchPark/searchPark?plateNum=' + plateNum
     })
+  },
+  /**
+   * 返回
+   */
+  returnBtn: function (e) {
+    wx.reLaunch({
+      url: '/pages/index/index',
+    })
   }
 })

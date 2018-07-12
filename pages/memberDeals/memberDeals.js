@@ -150,7 +150,7 @@ Page({
     var parkNo = e.detail.target.dataset.parkNo;
     var price = e.detail.target.dataset.price;
     var that = this
-    that.generateOrder(openId, fee * 100, carNo, parkNo, count, price);
+    that.generateOrder(openId, (fee * 100).toFixed(), carNo, parkNo, count, price);
     //登陆获取code   
     /*wx.login({
       success: function (res) {

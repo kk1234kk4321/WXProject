@@ -40,5 +40,11 @@ Page({
     wx.navigateTo({
       url: '/pages/parkingManage/parkingManage?parkNo=' + this.data.parkNo
     })
+  },
+  paySum:function(){
+    console.log("准备进入缴费汇总查看页面===", this.data);
+    wx.navigateTo({
+      url: '/pages/paySumManage/paySumManage?parkNo=' + this.data.parkNo
+    })
   }
 })
