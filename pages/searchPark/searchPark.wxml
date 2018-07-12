@@ -17,7 +17,7 @@
           </view>
           <view style="width:26%;float:left;text-align:right;font-size:15px;color:#6E6C69;">车位剩余：</view> 
           <view style="width:14%;float:left;text-align:right;font-size:15px;color:#F6912B;">
-            <view style="padding-right:20px;">{{info.carTotal}}</view>
+            <view style="padding-right:20px;">{{info.restCount}}</view>
           </view> 
         </view>
       </view>
