@@ -42,24 +42,37 @@ Page({
     console.log('form发生了submit事件，携带数据为：', e)
     var data = e.detail.value;
     var id = e.detail.target.dataset.parkId;
-    var feeHour = data.feeHour;
-    if(feeHour==''){
-      feeHour = 0;
+    var startMinute = data.startMinute;
+    if (startMinute==''){
+      startMinute = 0;
+    }
+    var startPrice = data.startPrice;
+    if (startPrice == '') {
+      startPrice = 0;
     }
     var feeTop = data.feeTop;
     if(feeTop==''){
       feeTop = 0;
     }
-    var freeHour = data.freeHour;
-    if(freeHour==''){
-      freeHour = 0;
-    }
+    var freeMinute = data.freeMinute;
+    if (freeMinute==''){
+      freeMinute = 0;
+    } 
     var feeMonth = data.feeMonth;
     if(feeMonth==''){
       feeMonth = 0;
     }
+    var unitMinute = data.unitMinute;
+    if (unitMinute == '') {
+      unitMinute = 1;
+    }
+    var unitPrice = data.unitPrice;
+    if (unitPrice == '') {
+      unitPrice = 0;
+    }
+
     wx.request({
-      url: app.globalData.url + '/park/updatePark/id/' + id + '/feeHour/' + feeHour + '/feeTop/' + feeTop + '/freeHour/' + freeHour + '/feeMonth/' + feeMonth,
+      url: app.globalData.url + '/park/updatePark/id/' + id + '/startMinute/' + startMinute + '/startPrice/' + startPrice + '/feeTop/' + feeTop + '/freeMinute/' + freeMinute + '/feeMonth/' + feeMonth + '/unitMinute/' + unitMinute +'/unitPrice/'+unitPrice,
       method: 'GET',
       data: {
       },
