@@ -7,7 +7,7 @@
       </view>
 
       <view wx:if="{{array1!=''&&array1!=null&&array1.length>0}}">
-        <view class="item" wx:for="{{array1}}" wx:for-index="idx" wx:for-item="item">
+        <view class="item" wx:for="{{array1}}" wx:for-index="idx" wx:for-item="item" bindtap='detailForPark' data-out-time="{{item.payDate}}">
           <view class="item-lab">{{item.payDate}}</view>
           <view class="item-descr">{{item.payFee}}元</view>
         </view>  
@@ -21,7 +21,7 @@
       </view>
 
       <view wx:if="{{array2!=''&&array2!=null&&array2.length>0}}">
-        <view class="item" wx:for="{{array2}}" wx:for-index="idx" wx:for-item="item">
+        <view class="item" wx:for="{{array2}}" wx:for-index="idx" wx:for-item="item" bindtap='detailForMember' data-pay-time="{{item.payDate}}">
           <view class="item-lab" >{{item.payDate}}</view>
           <view class="item-descr" >{{item.payFee}}元</view>
         </view>  

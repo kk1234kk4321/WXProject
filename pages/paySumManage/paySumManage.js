@@ -40,4 +40,16 @@ Page({
       }
     })
   },
+  detailForPark(e){
+    console.log("准备进入在线收费明细页面===", e.currentTarget.dataset.outTime);
+    wx.navigateTo({
+      url: '/pages/payFeeDetail/payFeeDetail?parkNo=' + this.data.parkNo + '&outTime=' + e.currentTarget.dataset.outTime
+    })
+  },
+  detailForMember(e){
+    console.log("准备进入长期租位收费明细页面===", e.currentTarget.dataset.payTime);
+    wx.navigateTo({
+      url: '/pages/payFeeDetailForMember/payFeeDetailForMember?parkNo=' + this.data.parkNo + '&payTime=' + e.currentTarget.dataset.payTime
+    })
+  }
 })

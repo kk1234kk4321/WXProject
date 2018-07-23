@@ -1,0 +1,26 @@
+<view class="container">
+  <view wx:if="{{array!=''&&array!=null&&array.length>0}}">
+      <view class="container-item" wx:for="{{array}}" wx:for-index="idx" wx:for-item="info">
+        <view class="item" style='background:#BEE6F2;height:38px;line-height:38px;'>
+          <view style='padding-left:3%;color:#716F6A;font-size:17px;'>{{info.carNo}}</view>
+        </view>
+        <view class="item" style="border-bottom: 1px #BEE6F2 solid">
+          <view class="item-lab">入场时间</view>
+          <view class="item-descr">{{info.inTime}}</view>
+        </view>
+        <view class="item" style="border-bottom: 1px #BEE6F2 solid">
+          <view class="item-lab">出场时间</view>
+          <view class="item-descr">{{info.outTime}}</view>
+        </view>
+        <view class="item" style="border-bottom: 1px #BEE6F2 solid">
+          <view class="item-lab">停车费用</view>
+          <view class="item-descr">¥{{info.originFee}}</view>
+        </view>
+        <view class="item">
+          <view class="item-lab">支付费用</view>
+          <view class="item-descr" style='color:#FF4500'>¥{{info.payFee}}</view>
+        </view>
+      </view>
+  </view>
+  <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>您暂时还没有在线缴费明细记录</view>
+</view>

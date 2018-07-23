@@ -17,7 +17,9 @@
     "pages/auditInfo/auditInfo",
     "pages/parkingManage/parkingManage",
     "pages/setNickname/setNickname",
-    "pages/paySumManage/paySumManage"
+    "pages/paySumManage/paySumManage",
+    "pages/payFeeDetail/payFeeDetail",
+    "pages/payFeeDetailForMember/payFeeDetailForMember"
   ],
   "window": {
     "backgroundTextStyle": "light",

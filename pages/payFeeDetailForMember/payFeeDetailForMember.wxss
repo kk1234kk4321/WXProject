@@ -1,0 +1,36 @@
+.container {
+  flex:1;
+  line-height:1.5;
+  font-size:15px ;
+} 
+
+.container-item{
+  background-color:white;
+  margin-top:22px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom:10px;
+}
+
+.item{
+  width: 94%;
+  margin:4px auto;
+  padding-bottom:3px;
+  display: flex;
+  flex-direction: row;
+}
+
+.item-lab{
+  font-size:15px;
+  color:#888888;
+  width: 40%;
+  padding-left:3%;
+}
+
+.item-descr{
+  text-align:right;
+  align-items: center;
+  font-size:17px;
+  width: 60%;
+  padding-right:3%;
+}
