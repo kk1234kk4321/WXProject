@@ -16,7 +16,10 @@
     "pages/myInfo/myInfo",
     "pages/auditInfo/auditInfo",
     "pages/parkingManage/parkingManage",
-    "pages/setNickname/setNickname"
+    "pages/setNickname/setNickname",
+    "pages/sellerManage/sellerManage",
+    "pages/sellerDiscount/sellerDiscount",
+    "pages/discountSuccess/discountSuccess"
   ],
   "window": {
     "backgroundTextStyle": "light",

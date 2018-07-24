@@ -1,0 +1,39 @@
+<!--pages/sellerDiscount/sellerDiscount.wxml-->
+<view class="container">
+  <view style="margin-top:20px;">
+    <view class="container-item" style="padding-bottom:20px;">   
+      <view class="search"> 
+        <view class="search-input">
+          <input style="width:100%;height:36px;line-height:36px;padding-left:6px;" type="text" placeholder="请搜索车牌号" bindinput='carNoInput' value="{{carNo}}"/>
+        </view>    
+        <view class="iconfont icon-sousuo4" style="font-size:24px;" bindtap="searchCarNo"></view>
+      </view>
+    </view>
+    <view wx:if="{{plateNum!='carNo'}}">
+      <view class="container-item" wx:if="{{sellerDiscount.totalDiscount!=''}}">
+        <view class="item">
+          <view>剩余{{sellerDiscount.remainDiscount}}张优惠券，每张优惠券抵扣{{sellerDiscount.minutes}}分钟</view>
+        </view>
+
+        <view class="container-middle">
+          <view class="lab"><view style="padding-left:20px;">优惠券</view></view>
+          <view class="descr">
+            <view style="width:74%;float:left;height:40px;border:2px #00A6D6 solid;border-radius:4px;">
+              <view class="iconfont icon-jian" data-curr-count="{{currCount}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" data-plate-num="{{plateNum}}" bindtap="minus"></view>
+              <view style="width:44%;float:left;padding-top:9px;text-align:center">
+                <input name="count" value="{{currCount}}" disabled="false"></input>
+              </view>
+              <view class="iconfont icon-jia" data-curr-count="{{currCount}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" data-plate-num="{{plateNum}}" bindtap="add"></view>
+            </view>
+            <view style="width:13%;float:right;text-align:right;padding-top:12px;margin-right:20px;">张</view>
+          </view>
+        </view>
+      </view>
+      <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>
+        您暂时查询不到优惠信息
+      </view>
+    </view>
+  </view>
+
+  <view class="pos-fixed" bindtap="makesure">确定</view>
+</view>

@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="container-item">
+    {{carNo}}优惠{{record.discountTime}}分钟
+  </view>
+
+  <view class="pos-fixed" bindtap="returnBtn">返回</view>
+</view>

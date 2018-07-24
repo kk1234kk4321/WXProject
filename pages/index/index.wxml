@@ -12,7 +12,7 @@
     <view class="iconfont icon-jia" style="margin:0 auto;color:#4CBFE0;font-size:24px;"></view>
   </view>
   <!-- <view style="text-align:right;padding-right:20px;padding-bottom:10px;color:#807D78;">添加新车牌</view> -->
-  <view class="container-others"  style="padding-bottom:60px;">
+  <view class="container-others" style="padding-bottom:60px;">
     <view class="others"><image src="../../img/cwyy.png" bindtap="searchPark"></image></view> 
     <!-- <view class="others"><image src="../../img/tcyh.png"></image></view> -->
     <view class="others"><image src="../../img/cqzw.png" bindtap="rentParkingplace"></image></view>
@@ -20,12 +20,10 @@
     <view class="others" wx:if="{{authorty==1||authorty==2}}">
       <image src="../../img/tccgl.png" bindtap="parkManage"></image>
     </view>
-  </view>
-  <!-- <view class="container-others" style="padding-bottom:60px;">
-    <view class="others" wx:if="{{authorty==1||authorty==2}}">
-      <image src="../../img/tccgl.png" bindtap="parkManage"></image>
+    <view class="others" wx:if="{{authorty==5}}">
+      <image src="../../img/sjgl.png" bindtap="sellerManage"></image>
     </view>
-  </view> -->
+  </view>
   <view class="container-bottom">
     <view style="margin:0 auto;">江苏掌源智能科技有限公司</view>
   </view>
