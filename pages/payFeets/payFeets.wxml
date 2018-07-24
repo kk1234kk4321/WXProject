@@ -46,7 +46,9 @@
       </view>
     </view>
     <view class="duration">收费标准：
-      <text style='color:#82807A;font-size:14px'>{{feetsData.freeHour}}小时内免费，超过{{feetsData.freeHour}}小时按{{feetsData.feeHour}}元/小时，24小时内不超过{{feetsData.feeTop}}元   
+      <text style='color:#82807A;font-size:14px'>{{feetsData.freeMinute}}分钟内免费，{{feetsData.startMinute}}分钟内收费{{feetsData.startPrice}}元，超过{{feetsData.startMinute}}分钟后按每{{feetsData.unitMinute}}分钟{{feetsData.unitPrice}}元<block style='font-size:14px;color:#82807A' wx:if='{{feetsData.feeTop > 0.00}}'>，24小时内不超过{{feetsData.feeTop}}元</block><block style='font-size:14px;color:#82807A' wx:else>，当前停车场未设置日最高收费。</block> 
+      
+      
       </text>
     </view>
 
@@ -66,7 +68,7 @@
           </button>
         </view>
         <view wx:else>
-          <button size="mini" type="default" bindtap="goPay" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-fee="{{feetsData.finalFee}}" data-record-id="{{feetsData.recordId}}" data-origin-fee="{{feetsData.originFee}}" >支付
+          <button size="mini" type="default" bindtap="goPay" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-fee="{{feetsData.finalFee}}" data-record-id="{{feetsData.recordId}}" data-origin-fee="{{feetsData.originFee}}" data-park-no="{{feetsData.parkNo}}">支付
           </button>
         </view>
       </view>

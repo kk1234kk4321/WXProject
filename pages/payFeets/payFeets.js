@@ -54,7 +54,7 @@ Page({
     var recordId = e.currentTarget.dataset.recordId; 
     var originFee = e.currentTarget.dataset.originFee;
     var openId = app.globalData.openId;
-    this.updateStatus(openId, 0, 0, recordId, originFee);
+    this.updateStatus(openId, 0, 0, recordId, originFee,0);
   },
   goDeal:function(e){
     console.log('缴费按钮触发事件：', e)
@@ -70,14 +70,15 @@ Page({
     var fee = e.currentTarget.dataset.fee;
     var recordId = e.currentTarget.dataset.recordId;
     var originFee = e.currentTarget.dataset.originFee;
+    var parkNo = e.currentTarget.dataset.parkNo;
     console.log('应缴金额originFee：', originFee)
     var openId = app.globalData.openId;
     var that = this
-    that.generateOrder(openId, fee * 100, recordId, originFee);
+    that.generateOrder(openId, (fee * 100).toFixed(), recordId, originFee,parkNo);
     
   },
   /**生成商户订单 */
-  generateOrder: function (openId, fee, recordId, originFee) {
+  generateOrder: function (openId, fee, recordId, originFee,parkNo) {
     console.log('生成商户订单')
     console.log('openId=', openId)
     console.log('fee=', fee)
@@ -104,7 +105,7 @@ Page({
         console.log("nonceStr:" + nonceStr)
         var tradeNo = res.data.data.tradeNo;
         var param = { "timeStamp": timeStamp, "package": packages, "paySign": paySign, "signType": "MD5", "nonceStr": nonceStr,"tradeNo":tradeNo };
-        that.pay(param, openId, fee, recordId,originFee)
+        that.pay(param, openId, fee, recordId,originFee,parkNo)
       },
       fail: function (res) {
         console.log("接口调用失败")
@@ -113,7 +114,7 @@ Page({
     })
   },
   /* 支付   */
-  pay: function (param, openId, fee, recordId, originFee) {
+  pay: function (param, openId, fee, recordId, originFee,parkNo) {
     var that = this
     console.log("支付")
     console.log(param)
@@ -129,7 +130,7 @@ Page({
         console.log(res)
 
         //更新支付状态
-        that.updateStatus(openId, param.tradeNo, fee, recordId, originFee);
+        that.updateStatus(openId, param.tradeNo, fee, recordId, originFee,parkNo);
       },
       fail: function (res) {
         // fail   
@@ -142,9 +143,10 @@ Page({
       }
     })
   },
-  updateStatus: function (openId, tradeNo, fee, recordId, originFee){
+  updateStatus: function (openId, tradeNo, fee, recordId, originFee,parkNo){
+    var carno = this.data.plateNum
     wx.request({
-      url: app.globalData.url + '/car/weixin/parkPay/openid/' + openId + '/tradeNo/' + tradeNo + '/fee/' + fee + '/recordId/' + recordId + '/originFee/' + originFee,
+      url: app.globalData.url + '/car/weixin/parkPay/openid/' + openId + '/tradeNo/' + tradeNo + '/fee/' + fee + '/recordId/' + recordId + '/originFee/' + originFee + '/carNo/' + encodeURI(carno)+'/parkNo/'+parkNo,
       method: 'GET',
       header: {
         "content-type": 'application/x-www-form-urlencoded'
