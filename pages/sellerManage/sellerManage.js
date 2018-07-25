@@ -41,7 +41,7 @@ Page({
     var plateNum = 'carNo';
     console.log("准备进入商家管理页面===", e.target.dataset);
     wx.navigateTo({
-      url: '/pages/sellerDiscount/sellerDiscount?parkNo=' + e.target.dataset.parkNo + '&carNo=0&currCount=0' + '&plateNum=' + plateNum
+      url: '/pages/sellerDiscount/sellerDiscount?parkNo=' + e.target.dataset.parkNo + '&carNo=0&currCount=0&plateNum=' + plateNum
     })
   }
 })

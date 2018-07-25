@@ -6,5 +6,5 @@
     </view>
   </view>
 </view>
-<view style='margin:40px 20px 5px 80px;color:#888888;' wx:else>您当前还没有停车场信息</view>
+<view style='margin-top:40px;text-align:center;color:#888888;' wx:else>您当前还没有停车场信息</view>
 </view>

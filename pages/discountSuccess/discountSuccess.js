@@ -58,8 +58,9 @@ Page({
   returnBtn: function(e) {
     var parkNo = this.data.parkNo
     var carNo = this.data.carNo
+    var plateNum = 'plateNum'
     wx.redirectTo({
-      url: '/pages/sellerDiscount/sellerDiscount?parkNo=' + parkNo + '&carNo=' + carNo + '&currCount=0',
+      url: '/pages/sellerDiscount/sellerDiscount?parkNo=' + parkNo + '&carNo=' + carNo + '&currCount=0&plateNum=' + plateNum,
     })
   }
 })
