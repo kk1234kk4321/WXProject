@@ -1,38 +1,42 @@
 <view class="container">
   <view wx:if="{{paymentInfo!=''}}">
-      <view class="item" style="margin-top:16px;border:none;">
-        <view style='padding-left:3%;color:#716F6A;font-size:17px;'>{{plateNum}}</view>
+    <view class="item" style="margin-top:16px;border:none;">
+      <view style='padding-left:3%;color:#716F6A;font-size:17px;'>{{plateNum}}</view>
+    </view>
+    <view class="container-item" wx:for="{{paymentInfo}}" wx:for-index="idx" wx:for-item="info">
+      <view class="item">
+        <view class="item-lab">停车场</view>
+        <view class="item-descr">{{info.parkName}}</view>
       </view>
-      <view class="container-item" wx:for="{{paymentInfo}}" wx:for-index="idx" wx:for-item="info">
-        <view class="item">
-          <view class="item-lab">停车场</view>
-          <view class="item-descr">{{info.parkName}}</view>
-        </view>
-        <view class="item">
-          <view class="item-lab">入场时间</view>
-          <view class="item-descr">{{info.inTime}}</view>
-        </view>
-        <view class="item">
-          <view class="item-lab">缴费时间</view>
-          <view class="item-descr">{{info.payTime}}</view>
-        </view>
-        <view class="item">
-          <view class="item-lab">停车时长</view>
-          <view class="item-descr">{{info.parkDay}}天{{info.parkHour}}小时{{info.parkMinute}}分钟</view>
-        </view>
-        <view class="item">
-          <view class="item-lab">停车费用</view>
-          <view class="item-descr">¥{{info.originFee}}</view>
-        </view>
-        <view class="item">
-          <view class="item-lab">会员优惠</view>
-          <view class="item-descr">¥{{info.dealsFee}}</view>
-        </view>
-        <view class="item" style="padding-bottom:26px;border-bottom:2px #00A7D6 solid;">
-          <view class="item-lab">支付费用</view>
-          <view class="item-descr" style='color:#FF4500'>¥{{info.payFee}}</view>
-        </view>
+      <view class="item">
+        <view class="item-lab">入场时间</view>
+        <view class="item-descr">{{info.inTime}}</view>
       </view>
+      <view class="item">
+        <view class="item-lab">缴费时间</view>
+        <view class="item-descr">{{info.payTime}}</view>
+      </view>
+      <view class="item">
+        <view class="item-lab">停车时长</view>
+        <view class="item-descr">{{info.parkDay}}天{{info.parkHour}}小时{{info.parkMinute}}分钟</view>
+      </view>
+      <view class="item">
+        <view class="item-lab">停车费用</view>
+        <view class="item-descr">¥{{info.originFee}}</view>
+      </view>
+      <view class="item">
+        <view class="item-lab">折扣时长</view>
+        <view class="item-descr">{{info.discountTime}}分钟</view>
+      </view>
+      <view class="item">
+        <view class="item-lab">会员优惠</view>
+        <view class="item-descr">¥{{info.dealsFee}}</view>
+      </view>
+      <view class="item" style="padding-bottom:26px;border-bottom:2px #00A7D6 solid;">
+        <view class="item-lab">支付费用</view>
+        <view class="item-descr" style='color:#FF4500'>¥{{info.payFee}}</view>
+      </view>
+    </view>
   </view>
   <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>您暂时还没有在线缴费记录</view>
 </view>
