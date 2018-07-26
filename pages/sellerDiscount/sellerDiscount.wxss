@@ -1,0 +1,83 @@
+/* pages/sellerDiscount/sellerDiscount.wxss */
+.search {
+    width: 86%;
+    height: 36px;
+    margin: 0 auto;
+    border: 2px #28A7C5 solid;
+    border-radius: 4px;
+}
+.search-input {
+   width: 86%;
+   float: left;
+   height: 36px;
+}
+.icon-sousuo4 {
+  width: 14%;
+  float: right;
+  height: 36px;
+  line-height: 36px;
+  color:#28A7C5;
+  text-align: center;
+}
+
+.item {
+  background-color: #B9DFEB;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.container-middle {
+  margin-top: 20px;
+}
+
+.lab {
+  width: 36%;
+  float: left;
+  letter-spacing: 2px;
+  padding-top: 12px;
+}
+
+.descr {
+   width: 64%;
+   float: left;
+   padding: 0px;
+}
+
+.icon-jian {
+   width: 27%;
+   height: 40px;
+   line-height: 40px;
+   float: left;
+   border-right: 1px #00A6D6 solid;
+   text-align: center;
+   font-size: 1.5rem;
+   color: #00A6D6;
+}
+
+.icon-jia {
+   width: 27%;
+   height: 40px;
+   line-height: 40px;
+   float: left; 
+   border-left: 1px #00A6D6 solid;
+   font-size: 1.5rem; 
+   text-align: center;
+   color: #00A6D6;
+}
+
+.pos-fixed {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #BEE6F2;
+  color: #00A8D5;
+  font-size: 16px;
+  justify-content: center;
+}

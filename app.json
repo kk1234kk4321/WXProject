@@ -17,6 +17,9 @@
     "pages/auditInfo/auditInfo",
     "pages/parkingManage/parkingManage",
     "pages/setNickname/setNickname",
+    "pages/sellerManage/sellerManage",
+    "pages/sellerDiscount/sellerDiscount",
+    "pages/discountSuccess/discountSuccess",
     "pages/paySumManage/paySumManage",
     "pages/payFeeDetail/payFeeDetail",
     "pages/payFeeDetailForMember/payFeeDetailForMember"
