@@ -11,7 +11,7 @@
     </view>
     <view wx:if="{{plateNum!='carNo'}}"><!--不是从商家管理页面进入商家优惠页面-->
       <!--存在该车牌-->
-      <view class="container-item" wx:if="{{sellerDiscount.totalDiscount!=''}}">
+      <view class="container-item" wx:if="{{sellerDiscount.remainDiscount!=''}}">
         <view class="item">
           <view>剩余{{sellerDiscount.remainDiscount}}张优惠券，每张优惠券抵扣{{sellerDiscount.minutes}}分钟</view>
         </view>
