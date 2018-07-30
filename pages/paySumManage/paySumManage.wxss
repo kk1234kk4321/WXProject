@@ -14,32 +14,29 @@
 }
 
 .item{
+  width: 94%;
+  margin:4px auto;
+  padding-bottom:3px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  border-bottom:1px #BEE6F2 solid;
-  /* padding-left: 20px; */
-  width: 96%;
-  margin: 3px auto;
-  height: 20px;
+  height:33px;line-height:33px;
+  border-bottom: 1px #BEE6F2 solid;
 }
 
 .item-lab{
-  font-size:15px;
-  width: 50%;
-  padding-left:5%;
-  /* padding-left: 20px; */
+  font-size:17px;
+  color:#888888;
+  width: 40%;
+  padding-left:3%;
 }
 
 .item-descr{
   text-align:right;
   align-items: center;
-  font-size:15px;
-  width: 50%;
-  padding-right:5%;
-  /* padding-right: 20px; */
+  font-size:17px;
+  width: 60%;
+  padding-right:3%;
 }
-
 .plateNum-item{
   display: flex;
   flex-direction: row;
