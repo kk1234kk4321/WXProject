@@ -61,6 +61,8 @@ App({
     // url:'http://localhost'
     // url:'http://192.168.1.113'
     url:'http://192.168.1.126'
+    // url:'http://192.168.1.126'
+    // url:'http://192.168.1.113'
     // url:'http://localhost:8080'
     // url:'http://192.168.1.113:8080'
     // url:'https://park.zhangyuanzhineng.com'
@@ -92,8 +94,6 @@ App({
           break;
         } else if (array[i].authorty == "ROLE_PARK_STAFF") {
           app.globalData.authorty = 2;
-        } else if (array[i].authorty == "ROLE_PARK_SELLER") {
-          app.globalData.authorty = 5;
         } else {
           app.globalData.authorty = 0;
         }

@@ -1,7 +1,7 @@
 <view class="container">
   <form bindsubmit="formSubmit">
     <view wx:if="{{array!=''}}">
-      <view class="container-item">
+      <view class="container-item"  style="padding-bottom:60px;">
         <view class="plateNum-item" style="border-bottom:2px #BEE6F2 solid;">
           <view class="item-lab" style="padding-left:5%;">{{array.parkName}}</view>
           <view class="item-descr" hidden="true">

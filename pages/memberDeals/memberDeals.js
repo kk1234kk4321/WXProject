@@ -77,7 +77,7 @@ Page({
     var currPrice = data.currPrice;
 
     currCount = parseInt(currCount + 1);
-    currPrice = parseFloat(currPrice) + parseFloat(unitPrice);
+    currPrice = (parseFloat(currPrice) + parseFloat(unitPrice)).toFixed(2);
     data.currCount = currCount;
     data.currPrice = currPrice;
     this.onLoad(data);
@@ -113,7 +113,7 @@ Page({
 
     if (currCount > 0) {
       currCount = parseInt(currCount - 1);
-      currPrice = parseFloat(currPrice) - parseFloat(unitPrice);
+      currPrice = (parseFloat(currPrice) - parseFloat(unitPrice)).toFixed(2);
       data.currCount = currCount;
       data.currPrice = currPrice;
       this.onLoad(data);
