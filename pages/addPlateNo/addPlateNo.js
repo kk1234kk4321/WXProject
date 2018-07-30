@@ -59,9 +59,10 @@ Page({
     console.log(e.currentTarget.dataset.ot);
     var carNo = that.data.carNo + e.currentTarget.dataset.ot;
     var express = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}$/;
-    if(carNo.length<=7){
+    if(carNo.length<=9){
       console.log("carNo.length == ", carNo.length)
-      if (carNo.length == 2) {
+      if (carNo.length == 8) {
+       alrt(carNo.length)
         console.log("express.test("+carNo+")====", express.test(carNo))
         if (express.test(carNo)) {
           that.setData({
@@ -79,7 +80,7 @@ Page({
     var that = this;
     console.log(e.currentTarget.dataset.ot);
     var carNo = that.data.carNo + e.currentTarget.dataset.ot;
-    if (carNo.length <= 7) {
+    if (carNo.length <= 9) {
       that.setData({
         carNo: carNo
       })
@@ -130,7 +131,7 @@ Page({
     //var plate = this.data.array[e.detail.value.plateNo];
     var carno = e;
     console.log('carno=', carno);
-    var express = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/;
+    var express = /^([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}(([0-9]{5}[DF])|([DF]([A-HJ-NP-Z0-9])[0-9]{4})))|([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳]{1})$/;
     console.log('express===>', express.test(carno))
     if (carno.length == 7 && express.test(carno)){
       wx.request({
@@ -164,7 +165,39 @@ Page({
           })
         }
       })
-    }else{  
+    } else if (carno.length == 8 && express.test(carno)) {
+      wx.request({
+        url: app.globalData.url + '/car/weixin/openid/' + openid + '/carno/' + encodeURI(carno),
+        method: 'GET',
+        data: {},
+        header: {
+          "content-type": 'application/x-www-form-urlencoded'
+        },
+        success: function (res) {
+          console.log("调用接口成功")
+          console.log("res.data====>", res)
+          wx.reLaunch({
+            url: '/pages/index/index',
+            success: function (res) {
+              wx.showToast({
+                title: '添加车牌号成功',
+                icon: 'success',
+                duration: 2000
+              })
+            }
+          })
+        },
+        fail: function (res) {
+          console.log("调用接口失败")
+          console.log(res.data)
+          wx.showToast({
+            title: '添加车牌号失败',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      })
+    } else{  
       wx.reLaunch({
         url: '/pages/addPlateNo/addPlateNo',
         success: function (res) {

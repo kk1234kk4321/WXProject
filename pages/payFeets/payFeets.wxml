@@ -17,9 +17,13 @@
         <view class="item-lab" style="padding-left:3%;">停车时长</view>
         <view class="item-descr" style="padding-right:3%;">{{feetsData.parkDay}}天{{feetsData.parkHour}}小时{{feetsData.parkMinute}}分钟</view>
       </view>
-      <view class="plateNum-item" style="height:30px;line-height:30px;">
-        <view class="item-lab">停车费用</view>
-        <view class="item-descr">{{feetsData.originFee}}元</view>
+        <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab"  style="padding-left:3%;">折扣时间</view>
+        <view class="item-descr" style="padding-right:3%;">{{feetsData.discountTime}}分钟</view>
+      </view> 
+       <view class="plateNum-item" style="width:94%;margin:0 auto;height:30px;line-height:30px;border-bottom:2px #BEE6F2 solid;">
+        <view class="item-lab"  style="padding-left:3%;">停车费用</view>
+        <view class="item-descr" style="padding-right:3%;">{{feetsData.originFee}}元</view>
       </view>
     </view>
     <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>您当前还没有缴费信息</view>

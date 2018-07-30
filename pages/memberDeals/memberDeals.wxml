@@ -7,10 +7,12 @@
 
   <view class="external">外部用户</view>
 
-  <view style="padding-top:6px;padding-left:30px;padding-right:30px;color:#686661;font-size:14px;">
-    <label style="color:#FF972E;">收费标准：</label>{{applyCar.freeHour}}小时内免费，超过{{applyCar.freeHour}}小时按{{applyCar.feeHour}}元/小时收费，24小时内不超过{{applyCar.feeTop}}元，按{{applyCar.feeMonth}}元/月收费。
-  </view>
 
+  <view style="padding-top:6px;padding-left:30px;padding-right:30px;color:#686661;font-size:14px;">
+    <label style="color:#FF972E;">收费标准：</label>
+      {{applyCar.freeMinute}}分钟内免费，{{applyCar.startMinute}}分钟内收费{{applyCar.startPrice}}元，超过{{applyCar.startMinute}}分钟后按每{{applyCar.unitMinute}}分钟{{applyCar.unitPrice}}元<block style='font-size:14px;color:#82807A' wx:if='{{feetsData.feeTop > 0.00}}'>，24小时内不超过{{applyCar.feeTop}}元</block><block style='font-size:14px;color:#82807A' wx:else>，当前停车场未设置日最高收费。</block> 
+   
+    </view>
   <view class='item' style="margin-top:20px;">
     <view class='item-lab' style='width:36%;padding-top:5px;letter-spacing:2px;'>包月时长</view>
     <view class='item-descr' style="width:64%;padding:0px;">

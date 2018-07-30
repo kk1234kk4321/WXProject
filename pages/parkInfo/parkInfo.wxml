@@ -7,26 +7,53 @@
     <view class="item">
       <view class="item-lab">车位剩余</view>
       <view class="item-descr">
-        <span style="font-size:18px;">{{parkInfo.restCount}}</span>/<span style="color:#716F6A;font-size:15px;">{{parkInfo.carTotal}}</span>
+        <span style="font-size:18px;">{{parkInfo.restCount}}</span>/
+        <span style="color:#716F6A;font-size:15px;">{{parkInfo.carTotal}}</span>
       </view>
     </view>
     <view class="item">
       <view class="item-lab">免费时间</view>
-      <view class="item-descr">{{parkInfo.freeHour}}小时</view>
+      <view class="item-descr">{{parkInfo.freeMinute}}分钟</view>
     </view>
     <view class="item">
-      <view class="item-lab">免费时间外收费</view>
-      <view class="item-descr"><span style="color:#FF972F;font-size:18px;">￥{{parkInfo.feeHour}}</span>/小时</view>
+      <view class="item-lab">免费时间外收费：</view>
     </view>
-    <view wx:if="{{parkInfo.feeMonth!=''&&parkInfo.feeMonth!=null}}"> 
+    <view class="item">
+      <view class='item-lab'>
+        <span style="color:#FF972F;font-size:18px;">{{parkInfo.startMinute}}
+        </span>分钟内收费
+      </view>
+      <view class="item-descr">
+        <span style="color:#FF972F;font-size:18px;">￥{{parkInfo.startPrice}}</span>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item-lab">超出上述时间后：</view>
+    </view>
+    <view class='item'>
+      <view class='item-lab'>每
+        <span style="color:#FF972F;font-size:18px;">{{parkInfo.unitMinute}}</span>
+        分钟收费
+      </view>
+      <view class="item-descr">
+        <span style="color:#FF972F;font-size:18px;">￥{{parkInfo.unitPrice}}</span>
+      </view>
+    </view>
+    <view wx:if="{{parkInfo.feeMonth!=''&&parkInfo.feeMonth!=null}}">
       <view class="item">
         <view class="item-lab">包月费用</view>
-        <view class="item-descr"><span style="color:#FF972F;font-size:18px;">￥{{parkInfo.feeMonth}}</span>/月</view>
+        <view class="item-descr">
+          <span style="color:#FF972F;font-size:18px;">￥{{parkInfo.feeMonth}}</span>/月</view>
       </view>
-    </view> 
+    </view>
     <view class="item" style="border:none;">
       <view class="item-lab" style="width:0%;"></view>
-      <view class="item-descr" style="width:100%;color:#74726D;font-size:15px;">24小时内最多收取{{parkInfo.feeTop}}元</view>
+      <block wx:if="{{parkInfo.feeTop>0.00}}">
+        <view class="item-descr" style="width:100%;color:#74726D;font-size:15px;">24小时内最多收取{{parkInfo.feeTop}}元</view>
+      </block>
+      <block wx:else>
+        <view class="item-descr" style="width:100%;color:#74726D;font-size:15px;">该停车场未设置日最高收费</view>
+      </block>
     </view>
   </view>
 </view>
