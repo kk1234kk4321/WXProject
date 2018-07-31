@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: row;
   margin-top: 10px;
-  /* margin-bottom: 40px; */
+  flex-wrap:wrap;
 }
 
 .container-others image {
@@ -63,10 +63,10 @@
 }
 
 .others {
-  width: 25%;
-  float: left;
   text-align: center;
   background: white;
+  margin:0 5px;
+
 }
 
 /* .container-bottom {
