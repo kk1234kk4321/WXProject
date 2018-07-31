@@ -1,6 +1,9 @@
 <view class="container">
-  <view class="container-item">
+  <view class="container-item" wx:if="{{record.discountTime!='null'}}">
     {{carNo}}优惠{{record.discountTime}}分钟
+  </view>
+  <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>
+    您暂时没有停车记录！
   </view>
 
   <view class="pos-fixed" bindtap="returnBtn">返回</view>

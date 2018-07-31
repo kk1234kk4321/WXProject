@@ -57,9 +57,7 @@ App({
     userInfo: null,
     plateNums:null,
     openId:null,
-    authorty: 0,
-    // url:'http://localhost'
-    // url:'http://192.168.1.113'
+    authorty: 0,    
     // url:'http://192.168.1.126'
     // url:'http://localhost:8080'
     // url:'http://192.168.1.113:8080'
