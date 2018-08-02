@@ -32,7 +32,7 @@
       </view>
       <!--文本框为空或车牌不存在-->
       <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>
-        您暂时查询不到优惠信息
+        该停车场下查询不到该车牌号
       </view>
     </view>
   </view>

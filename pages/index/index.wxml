@@ -20,7 +20,7 @@
     <view class="others" wx:if="{{authorty==1||authorty==2}}">
       <image src="../../img/tccgl.png" bindtap="parkManage"></image>
     </view>
-    <view class="others" wx:if="{{authorty==1||authorty==5}}">
+    <view class="others" wx:if="{{authorty==5}}">
       <image src="../../img/sjgl.png" bindtap="sellerManage"></image>
     </view>
   </view>
