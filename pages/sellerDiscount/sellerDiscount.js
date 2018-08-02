@@ -87,7 +87,7 @@ Page({
     console.log("openid：", openid)
     if(carNo==""||carNo==null) {//车牌号为空
       that.setData({
-        sellerDiscount: { remainDiscount: '', usedDiscount: '', minutes: '' },
+        sellerDiscount: { remainDiscount: 'null', usedDiscount: 'null', minutes: 'null' },
         plateNum: 'plateNum'
       })
     } else {
