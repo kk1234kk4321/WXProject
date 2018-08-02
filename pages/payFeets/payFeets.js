@@ -144,6 +144,7 @@ Page({
     })
   },
   updateStatus: function (openId, tradeNo, fee, recordId, originFee,parkNo){
+    console.log('调用修改支付状态接口。。。')
     var carno = this.data.plateNum
     wx.request({
       url: app.globalData.url + '/car/weixin/parkPay/openid/' + openId + '/tradeNo/' + tradeNo + '/fee/' + fee + '/recordId/' + recordId + '/originFee/' + originFee + '/carNo/' + encodeURI(carno)+'/parkNo/'+parkNo,
@@ -152,6 +153,7 @@ Page({
         "content-type": 'application/x-www-form-urlencoded'
       },
       success: function (res) {
+        console.log('调用修改支付状态接口成功！')
         wx.navigateBack({
           delta: 1, // 回退前 delta(默认为1) 页面   
           success: function (res) {
