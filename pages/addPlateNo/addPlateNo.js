@@ -59,7 +59,7 @@ Page({
     console.log(e.currentTarget.dataset.ot);
     var carNo = that.data.carNo + e.currentTarget.dataset.ot;
     var express = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}$/;
-    if(carNo.length<=9){
+    if(carNo.length<9){
       console.log("carNo.length == ", carNo.length)
       if (carNo.length == 8) {
        alrt(carNo.length)
@@ -80,7 +80,7 @@ Page({
     var that = this;
     console.log(e.currentTarget.dataset.ot);
     var carNo = that.data.carNo + e.currentTarget.dataset.ot;
-    if (carNo.length <= 9) {
+    if (carNo.length < 9) {
       that.setData({
         carNo: carNo
       })

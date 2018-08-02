@@ -49,14 +49,14 @@
         <view class="item-descr">{{feetsData.expireTime}}</view>
       </view>
     </view>
-    <view class="duration">收费标准：
-      <text style='color:#82807A;font-size:14px'>{{feetsData.freeMinute}}分钟内免费，{{feetsData.startMinute}}分钟内收费{{feetsData.startPrice}}元，超过{{feetsData.startMinute}}分钟后按每{{feetsData.unitMinute}}分钟{{feetsData.unitPrice}}元<block style='font-size:14px;color:#82807A' wx:if='{{feetsData.feeTop > 0.00}}'>，24小时内不超过{{feetsData.feeTop}}元</block><block style='font-size:14px;color:#82807A' wx:else>，当前停车场未设置日最高收费。</block> 
+    <view class="duration"  >收费标准：
+      <text style='color:#82807A;font-size:13px;'>{{feetsData.freeMinute}}分钟内免费，{{feetsData.startMinute}}分钟内收费{{feetsData.startPrice}}元，超过{{feetsData.startMinute}}分钟后按每{{feetsData.unitMinute}}分钟{{feetsData.unitPrice}}元<block style='font-size:14px;color:#82807A' wx:if='{{feetsData.feeTop > 0.00}}'>，24小时内不超过{{feetsData.feeTop}}元。</block><block style='font-size:14px;color:#82807A' wx:else>，当前停车场未设置日最高收费。</block> 
       
       
       </text>
     </view>
 
-    <view class="container-bottom">
+    <view class="container-bottom" >
       <view style="width:70%;float:left;padding-left:6%;display: flex;flex-direction: row;">
         <view style='font-size:16px;color:black;' wx:if='{{feetsData.recordStatus==3}}'>补充收费：</view>
         <view style='font-size:16px;color:black;' wx:else>应缴金额：</view>

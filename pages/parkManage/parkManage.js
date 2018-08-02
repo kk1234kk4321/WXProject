@@ -40,7 +40,7 @@ Page({
   parkManage:function(e){
     console.log("准备进入停车场业务功能管理页面===", e.target.dataset);
     wx.navigateTo({
-      url: '/pages/parkOwnerManage/parkOwnerManage?parkNo='+e.target.dataset.parkNo
+      url: '/pages/parkOwnerManage/parkOwnerManage?parkNo='+e.target.dataset.parkNo+'&parkId='+e.target.dataset.parkId
     })
   }
 })

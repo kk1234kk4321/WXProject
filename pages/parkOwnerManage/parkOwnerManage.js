@@ -7,7 +7,8 @@ Page({
    */
   data: {
     parkNo:'',
-    authorty:''
+    authorty:'',
+    parkId:''
   },
 
   /**
@@ -17,7 +18,8 @@ Page({
     console.log("进入停车场功能管理页面===",res);
     this.setData({
       parkNo:res.parkNo,
-      authorty: app.globalData.authorty
+      authorty: app.globalData.authorty,
+      parkId:res.parkId
     })
     wx.setNavigationBarTitle({
       title: '停车场管理'
@@ -32,7 +34,7 @@ Page({
   audit:function(){
     console.log("准备进入白名单审核页面===", this.data);
     wx.navigateTo({
-      url: '/pages/auditInfo/auditInfo?parkNo=' + this.data.parkNo
+      url: '/pages/auditInfo/auditInfo?parkNo=' + this.data.parkNo+'&parkId='+this.data.parkId
     })
   },
   parking:function(){

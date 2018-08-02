@@ -3,10 +3,12 @@ Page({
   data: {
     array: {},
     parkNo: '',
+    parkId:''
   },
   onLoad(res) {
     this.setData({
-      parkNo: res.parkNo
+      parkNo: res.parkNo,
+      parkId:res.parkId
     }),
       wx.setNavigationBarTitle({
         title: '白名单审核'
@@ -14,9 +16,9 @@ Page({
   },
   onShow() {
     var that = this
-    var parkNo = that.data.parkNo
+    var parkId = that.data.parkId
     wx.request({
-      url: app.globalData.url + '/park/applyCarList/parkNo/' + parkNo+'/openid/'+app.globalData.openId,
+      url: app.globalData.url + '/park/applyCarList/parkId/' + parkId,
       method: 'GET',
       data: {},
       header: {

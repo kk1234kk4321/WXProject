@@ -13,9 +13,13 @@
 }
 
 .duration{
-  margin:5px 6% 5px 6%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 120px;
   color:#FF972D;
   font-size:15px;
+  line-height: 20px;
+  padding-bottom: 20px;
 }
 
 .plateNum-item{
