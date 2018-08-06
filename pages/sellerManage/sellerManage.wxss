@@ -24,3 +24,20 @@
   margin: 3px auto;
   height: 40px;
 }
+
+.item-left {
+  width: 54%;
+  float: left;
+  padding-left: 2%;
+  font-size: 17px;
+  padding-top: 2px;
+}
+
+.item-right {
+  width: 42%;
+  float: right;
+  padding-right: 2%;
+  color:#6E6C69;
+  font-size: 15px;
+  text-align: right;
+}

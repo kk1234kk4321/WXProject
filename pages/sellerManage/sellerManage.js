@@ -1,12 +1,10 @@
 const app = getApp()
 Page({
   data: {
-    array: {},
+    array: {}
   },
+
   onLoad(res) {
-    /*this.setData({
-      parkNo: res.parkNo
-    }),*/
     wx.setNavigationBarTitle({
       title: '商家管理'
     })
@@ -25,7 +23,7 @@ Page({
       },
       success: function (res) {
         console.log("调用商家停车场管理接口成功")
-        console.log("parkList====>", res)
+        console.log("parkList====>", res.data.data)
         if (res.data != '') {
           that.setData({
             array: res.data.data
@@ -39,8 +37,8 @@ Page({
     })
   },
   searchCarNo: function (e) {
-    var parkNo = e.target.dataset.parkNo
-    var parkName = e.target.dataset.parkName
+    var parkNo = e.currentTarget.dataset.parkNo
+    var parkName = e.currentTarget.dataset.parkName
     wx.navigateTo({
       url: '/pages/searchCarNo/searchCarNo?parkNo=' + parkNo + '&parkName=' + parkName,
     })

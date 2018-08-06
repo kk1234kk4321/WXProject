@@ -31,6 +31,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
+  },
+
+  /**
+   * 监听文本框输入
+   */
+  carNoInput: function (e) {
+    var carNo = e.detail.value;
+    this.setData({
+      carNo: carNo
+    })
+  },
+
+  /**
+   * 搜索车牌号
+   */
+  searchCarNo: function (e) {
+    console.log('监听搜索框文本，carNo=', this.data.carNo);
     var that = this
     var parkNo = that.data.parkNo
     var carNo = that.data.carNo
@@ -66,33 +84,15 @@ Page({
   },
 
   /**
-   * 监听文本框输入
-   */
-  carNoInput: function (e) {
-    var carNo = e.detail.value;
-    this.setData({
-      carNo: carNo
-    })
-  },
-
-  /**
-   * 搜索车牌号
-   */
-  searchCarNo: function (e) {
-    console.log('监听搜索框文本，carNo=', this.data.carNo);
-    this.onShow();
-  },
-
-  /**
    * 点击车牌->进入优惠券页面
    */
   sellerDiscount: function(e) {
     var that = this
     var parkNo = that.data.parkNo
     var parkName = that.data.parkName
-    var carNo = e.target.dataset.carNo
+    var carNo = e.currentTarget.dataset.carNo
     console.log("parkNo:", parkNo)
-    console.log("carNo", carNo)
+    console.log("carNo啦啦啦", carNo)
 
     wx.navigateTo({
       url: '/pages/sellerDiscount/sellerDiscount?parkNo=' + parkNo + '&parkName=' + parkName + '&carNo=' + carNo + '&currCount=0',
