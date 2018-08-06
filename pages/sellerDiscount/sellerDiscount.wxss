@@ -1,4 +1,23 @@
 /* pages/sellerDiscount/sellerDiscount.wxss */
+.container-header {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 3px;
+  padding-bottom: 3px;
+  display: flex;
+  flex-direction: row;
+}
+.carNo {
+  width: 40%;
+  padding-left: 30px;
+  color: #716F6A;
+}
+.parkNo {
+  width: 60%;
+  text-align: right;
+  padding-right: 30px;
+  font-size: 17px;
+}
 .search {
     width: 86%;
     height: 36px;
@@ -20,16 +39,15 @@
   text-align: center;
 }
 
-.item {
+.item-descr {
   background-color: #B9DFEB;
   height: 40px;
   line-height: 40px;
   text-align: center;
   font-size: 16px;
-  margin-top: 8px;
 }
 
-.container-middle {
+.container-operation {
   margin-top: 20px;
 }
 

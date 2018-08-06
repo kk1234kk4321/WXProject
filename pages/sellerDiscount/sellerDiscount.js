@@ -8,10 +8,10 @@ Page({
    */
   data: {
     parkNo: '',
+    parkName: '',
     carNo: '',
     sellerDiscount: {},
-    currCount: 0,
-    plateNum: ''
+    currCount: 0
   },
 
   /**
@@ -20,9 +20,9 @@ Page({
   onLoad: function (res) {
     this.setData({
       parkNo: res.parkNo,
-      currCount: res.currCount,
-      plateNum: res.plateNum,
-      carNo: res.carNo
+      parkName: res.parkName,
+      carNo: res.carNo,
+      currCount: res.currCount
     });
 
     wx.setNavigationBarTitle({
@@ -38,11 +38,6 @@ Page({
     var openid = app.globalData.openId
     var parkNo = that.data.parkNo
     var carNo = that.data.carNo
-    if(carNo == 0) {
-      that.setData({
-        carNo: ''
-      })
-    }
     that.setData({
       currCount: 0
     })
@@ -56,9 +51,16 @@ Page({
         "content-type": 'application/w-www-form-urlencoded'
       },
       success: function(res) {
-        that.setData({
-          sellerDiscount: res.data.data
-        })
+        console.log(res.data.data)
+        if(res.data != '') {
+          that.setData({
+            sellerDiscount: res.data.data
+          })
+        } else {
+          that.setData({
+            sellerDiscount: ''
+          })
+        }
       }
     })
   },
@@ -74,50 +76,6 @@ Page({
   },
 
   /**
-   * 搜索车牌号
-   */
-  searchCarNo: function(e) {
-    var that = this
-    var parkNo = that.data.parkNo
-    var carNo = that.data.carNo
-    var openid = app.globalData.openId
-
-    console.log("当前车牌：", carNo)
-    console.log("parkNo：", parkNo)
-    console.log("openid：", openid)
-    if(carNo==""||carNo==null) {//车牌号为空
-      that.setData({
-        sellerDiscount: { remainDiscount: 'null', usedDiscount: 'null', minutes: 'null' },
-        plateNum: 'plateNum'
-      })
-    } else {
-      wx.request({
-        url: app.globalData.url + '/car/weixin/sellerDiscount/openid/' + encodeURI(openid) + '/parkNo/' + encodeURI(parkNo) + '/carNo/' + encodeURI(carNo),
-        method: 'GET',
-        data: {},
-        header: {
-          "content-type": 'application/x-www-form-urlencoded'
-        },
-        success: function (res) {
-          console.log("调用查询carNo优惠记录接口")
-          console.log("sellerDiscount====>", res.data.data)
-          if(res.data != '') {
-            that.setData({
-              sellerDiscount: res.data.data,
-              plateNum: 'plateNum'
-            })
-          } else {
-            that.setData({
-              sellerDiscount: '',
-              plateNum: 'plateNum'
-            })
-          }
-        }
-      })
-    }
-  },
-
-  /**
    * 加号（+）
    */
   add(event) {
@@ -125,7 +83,6 @@ Page({
     var data = event.target.dataset;
     console.log("add触发事件：", data);
     var currCount = data.currCount;
-    var plateNum = data.plateNum;
     if(currCount < remainDiscount) {
       currCount = parseInt(currCount + 1);
       data.currCount = currCount;
@@ -135,7 +92,7 @@ Page({
       var that = this;
       var carNo = that.data.carNo;
       var parkNo = that.data.parkNo;
-
+      var parkName = that.data.parkName;
       console.log("车牌号：", carNo);
       console.log("停车场编号：", parkNo);
       console.log("优惠券：", currCount);
@@ -149,7 +106,6 @@ Page({
     var data = event.target.dataset;
     console.log("minus触发事件：", data);
     var currCount = data.currCount;
-    var plateNum = data.plateNum;
     if (currCount > 0) {
       currCount = parseInt(currCount - 1);
       data.currCount = currCount;
@@ -159,6 +115,7 @@ Page({
       var that = this;
       var carNo = that.data.carNo;
       var parkNo = that.data.parkNo;
+      var parkName = that.data.parkName;
       console.log("车牌号：", carNo);
       console.log("停车场编号：", parkNo);
       console.log("优惠券：", currCount); 
@@ -172,6 +129,7 @@ Page({
     var that = this
     var openid = app.globalData.openId
     var parkNo = that.data.parkNo
+    var parkName = that.data.parkName
     var carNo = that.data.carNo
     var currCount = that.data.currCount
     var remainDiscount = that.data.sellerDiscount.remainDiscount
@@ -180,6 +138,7 @@ Page({
     console.log("openid：", openid)
     console.log("当前车牌：", carNo)
     console.log("parkNo：", parkNo)
+    console.log("parkName：", parkName)
     console.log("currCount：", currCount)
     console.log("剩余优惠券：", remainDiscount)
     console.log("抵扣时间：", minutes)
@@ -201,7 +160,7 @@ Page({
           })
           console.log("进入优惠成功页面")
           wx.navigateTo({
-            url: '/pages/discountSuccess/discountSuccess?parkNo=' + parkNo + '&carNo=' + carNo,
+            url: '/pages/discountSuccess/discountSuccess?parkNo=' + parkNo + '&parkName=' + parkName + '&carNo=' + carNo,
           })
         }
       })

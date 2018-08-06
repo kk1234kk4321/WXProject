@@ -1,0 +1,19 @@
+<view class="container">
+    <view class="container-item">
+      <view class="search"> 
+        <view class="search-input">
+          <input style="width:100%;height:36px;line-height:36px;padding-left:6px;" type="text" placeholder="请搜索车牌号" bindinput='carNoInput' value="{{carNo}}"/>
+        </view>    
+        <view class="iconfont icon-sousuo4" style="font-size:24px;" bindtap="searchCarNo"></view>
+      </view>
+
+      <view wx:if="{{carList!=''}}">
+        <view class="container-item">
+          <view class="item" wx:for="{{carList}}" wx:for-index="idx" wx:for-item="item">
+            <view style="font-size:16px;color:#000;text-align:center;width:100%;" bindtap="sellerDiscount" data-car-no="{{item.carNo}}">{{item.carNo}}</view>
+          </view>
+        </view>
+      </view>
+      <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>该停车场下暂时没有该车牌信息</view>
+    </view>
+</view>

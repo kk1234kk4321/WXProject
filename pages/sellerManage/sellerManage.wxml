@@ -2,7 +2,7 @@
 <view wx:if="{{array!=''}}">
   <view class="container-item">
     <view class="item" wx:for="{{array}}" wx:for-index="idx" wx:for-item="item">
-      <view style="font-size:16px;color:#000;text-align:center;width:100%;" bindtap="sellerDiscount" data-park-no="{{item.parkNo}}">{{item.parkName}}</view>
+      <view style="font-size:16px;color:#000;text-align:center;width:100%;" bindtap="searchCarNo" data-park-no="{{item.parkNo}}" data-park-name="{{item.parkName}}">{{item.parkName}}</view>
     </view>
   </view>
 </view>

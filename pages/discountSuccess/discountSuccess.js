@@ -8,6 +8,7 @@ Page({
    */
   data: {
     parkNo: '',
+    parkName: '',
     carNo: '',
     record: {}
   },
@@ -18,6 +19,7 @@ Page({
   onLoad: function (res) {
     this.setData({
       parkNo: res.parkNo,
+      parkName: res.parkName,
       carNo: res.carNo
     })
 
@@ -57,10 +59,11 @@ Page({
    */
   returnBtn: function(e) {
     var parkNo = this.data.parkNo
+    var parkName = this.data.parkName
     var carNo = this.data.carNo
-    var plateNum = 'plateNum'
+    console.log(parkName)
     wx.redirectTo({
-      url: '/pages/sellerDiscount/sellerDiscount?parkNo=' + parkNo + '&carNo=' + carNo + '&currCount=0&plateNum=' + plateNum,
+      url: '/pages/sellerDiscount/sellerDiscount?parkNo=' + parkNo + '&parkName=' + parkName + '&carNo=' + carNo + '&currCount=0'
     })
   }
 })

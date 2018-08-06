@@ -22,7 +22,8 @@
     "pages/discountSuccess/discountSuccess",
     "pages/paySumManage/paySumManage",
     "pages/payFeeDetail/payFeeDetail",
-    "pages/payFeeDetailForMember/payFeeDetailForMember"
+    "pages/payFeeDetailForMember/payFeeDetailForMember",
+    "pages/searchCarNo/searchCarNo"
   ],
   "window": {
     "backgroundTextStyle": "light",
