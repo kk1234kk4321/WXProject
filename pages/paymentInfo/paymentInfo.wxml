@@ -3,6 +3,7 @@
     <view class="item" style="margin-top:16px;border:none;">
       <view style='padding-left:3%;color:#716F6A;font-size:17px;'>{{plateNum}}</view>
     </view>
+    <view class='td'>——仅显示最近500条记录——</view>
     <view class="container-item" wx:for="{{paymentInfo}}" wx:for-index="idx" wx:for-item="info">
       <view class="item">
         <view class="item-lab">停车场</view>
@@ -38,5 +39,6 @@
       </view>
     </view>
   </view>
+  <!-- <view class="item-descr">——剩余记录请寻找停车管路员后台查询——</view> -->
   <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>您暂时还没有在线缴费记录</view>
 </view>
