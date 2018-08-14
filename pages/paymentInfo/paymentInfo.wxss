@@ -35,3 +35,12 @@
   width: 60%;
   padding-right:3%;
 }
+
+
+.td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#716F6A;
+  font-size:10px;
+}
