@@ -1,0 +1,80 @@
+/**index.wxss**/
+.container {
+  flex:1;
+  line-height:1.0;
+  font-size:17px ;
+  background-color:white;
+  /* margin-top:10px; */
+} 
+
+.container-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom:2px #BEE6F2 solid;
+  /* padding-left: 20px; */
+  width: 90%;
+  margin: 3px auto;
+  height: 30px;
+}
+
+.item-lab{
+  font-size:15px;
+  width: 40%;
+  padding-left:6%;
+  /* padding-left: 20px; */
+}
+
+.item-descr{
+  text-align:right;
+  align-items: center;
+  font-size:15px;
+  width: 60%;
+  /* padding-right: 20px; */
+}
+
+.plateNum-item{
+  margin-top:3px;
+  padding-bottom:3px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  width: 90%;
+}
+
+.plateNum-text{
+  padding-left:6%;
+  font-size:17px;
+  color:#000;
+  width: 50%;
+  padding-right:10%;
+  color:#86837E;
+}
+
+.search {
+    width: 86%;
+    height: 40px;
+    margin: 0 auto;
+    border: 2px #28A7C5 solid;
+    border-radius: 4px;
+
+}
+.search-input {
+   width: 86%;
+   float: left;
+   height: 36px;
+}
+.icon-sousuo4 {
+  width: 14%;
+  float: right;
+  height: 36px;
+  line-height: 36px;
+  color:#28A7C5;
+  text-align: center;
+}

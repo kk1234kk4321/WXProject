@@ -1,0 +1,35 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+      <view class="container-item"  style="padding-bottom:60px;">
+        <view class="plateNum-item" style="border-bottom:2px #BEE6F2 solid;">
+          <view class="item-lab" style="padding-left:5%;">{{feetsData.carNo}}</view>
+        </view>
+
+        <view class="plateNum-item" style="border-bottom:2px #BEE6F2 solid;">
+          <view style="width:55%;padding-left:5%;">应收金额</view>
+          <view style="width:25%;">{{feetsData.finalFee}}元</view>
+          <view style="width:20%;"></view>
+        </view>
+
+        <view class="plateNum-item">
+          <view style="width:55%;padding-left:5%;">现金收费原因</view>
+          <view style="width:25%;"></view>
+          <view style="width:20%;"></view>
+        </view>
+
+        <view class="plateNum-item">
+          <radio-group class="radio-group" name="status">
+            <label class="radio" >
+              <view><radio value="406" checked="true"/>用户要求使用现金</view>
+              <view><radio value="407" />系统故障</view>
+            </label>
+          </radio-group>
+        </view>
+</view>
+
+      <view class="container-bottom">
+        <button form-type="submit" style="width:100%;height:50px;line-height:50px;font-size:17px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-park-id="{{array.id}}">现金收费 </button>
+      </view>
+   
+  </form>
+</view>

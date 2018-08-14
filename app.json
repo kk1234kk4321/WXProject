@@ -23,7 +23,9 @@
     "pages/paySumManage/paySumManage",
     "pages/payFeeDetail/payFeeDetail",
     "pages/payFeeDetailForMember/payFeeDetailForMember",
-    "pages/searchCarNo/searchCarNo"
+    "pages/searchCarNo/searchCarNo",
+    "pages/cashPayment/cashPayment",
+    "pages/cashPaying/cashPaying"
   ],
   "window": {
     "backgroundTextStyle": "light",
