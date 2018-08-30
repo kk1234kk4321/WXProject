@@ -27,10 +27,17 @@ Page({
         var a=0;
         if(res.data.data){
           var ss = [];
-          for(a=0;a<500;a++){
-            // ss=[];
-            ss.push(res.data.data[a]);
-            
+          var len = res.data.data.length;
+          console.log("总记录条数：", len);
+          if(len<=500) {//有多少条数据，显示多少条
+            for(a=0;a<len;a++) {
+              ss.push(res.data.data[a]);
+            }
+          } else {//只显示前500条数据
+            for (a = 0; a < 500; a++) {
+              // ss=[];
+              ss.push(res.data.data[a]);
+            }
           }
           that.setData({
             // pageIndex:that.data.pageIndex+1,
