@@ -15,7 +15,7 @@
       <button size="default" type="default" bindtap="paySum" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >收益统计</button>
   </view>
 
-  <view style="padding-top:20px;" wx:if="{{authorty==1}}">
+  <view style="padding-top:20px;" wx:if="{{authorty==1||authorty==2}}">
       <button size="default" type="default" bindtap="cashPay" style="width:100%;height:50px;line-height:50px;font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" >现金收费</button>
   </view>
 </view>
