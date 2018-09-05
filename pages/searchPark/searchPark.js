@@ -8,14 +8,44 @@ Page({
     parkList: {},
     plateNum: ''
   },
+  onShow() {
+    var that = this
+    var plateNum = that.data.plateNum
+    if (plateNum == '') {
+      plateNum = null;
+    }
+    wx.request({
+      url: app.globalData.url + '/car/weixin/parkList/all/carNo/' + encodeURI(plateNum),
+      method: 'GET',
+      data: {},
+      header: {
+        "content-type": 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log("调用在停车辆列表接口成功")
+        console.log("plateNum====>", res)
+        if (res.data != '') {
+          that.setData({
+            parkList: res.data.data
+          })
+        } else {
+          that.setData({
+            parkList: ''
+          })
+        }
+      }
+    })
+  },
 
   //生命周期函数--监听页面加载
-  onLoad: function (res) {
-    if(res.plateNum=="carNo") {//车位预约
+  onLoad: function(res) {
+    if (res.plateNum == "carNo") { //车位预约
       console.log("您要预约的车牌号：", res.plateNum);
-    } else {//长期租位
+     
+    } else { //长期租位
       console.log("您要长期租位的车牌号：", res.plateNum);
-    }
+   
+      }
     this.setData({
       plateNum: res.plateNum
     })
@@ -24,7 +54,7 @@ Page({
       title: '停车场搜索'
     })
   },
-  
+
   //监听文本框输入
   parkNameInput: function(e) {
     var parkName = e.detail.value;
@@ -32,18 +62,19 @@ Page({
       parkName: parkName
     })
   },
-  
+
   //停车场搜索功能
-  searchPark:function(e) {
+  searchPark: function(e) {
     var that = this
     var parkName = that.data.parkName
     var plateNum = that.data.plateNum
+    console.log("搜索停车场", parkName)
     console.log("车牌为", plateNum)
-    if(parkName==""||parkName==null) {//搜索内容为空
+    if (parkName == "" || parkName == null) { //搜索内容为空
       that.setData({
         parkList: ''
       })
-    } else {//搜索内容不为空
+    } else { //搜索内容不为空
       console.log("--- 正在搜索" + parkName + " ---")
 
       wx.request({
@@ -54,7 +85,7 @@ Page({
         header: {
           "content-type": 'application/x-www-form-urlencoded'
         },
-        success: function (res) {
+        success: function(res) {
           console.log("调用search接口成功")
           console.log("parkInfo====>", res)
           console.log(res.data.data)
@@ -73,7 +104,7 @@ Page({
   },
 
   //停车场详情
-  parkInfo: function (e) {
+  parkInfo: function(e) {
     var parkName = e.currentTarget.dataset.parkName;
     console.log(parkName);
     wx.navigateTo({

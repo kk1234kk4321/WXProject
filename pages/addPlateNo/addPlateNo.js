@@ -124,6 +124,17 @@ Page({
     })
     that.formSubmit(ss);
   },
+  ret:function(){
+    wx.reLaunch({
+        url: '/pages/index/index',
+        success:function(res){
+          console.log("返回成功");
+        },
+        fail:function(res){
+          console.log("返回失败");
+        }
+      })
+  },
   formSubmit:function(e){
     console.log('form发生了submit事件，携带数据为：', e);
     //var data = e.detail.value;

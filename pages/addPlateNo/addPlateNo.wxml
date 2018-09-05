@@ -4,8 +4,12 @@
   </view> -->
   <view class="tel"  bindtap="d1">
     <!-- <text style='font-size:18px;color:#0000AA;padding-right:10px;'>请输入车牌号:</text>{{carNo}}  -->
-    <input type="text" placeholder="请输入车牌号" value="{{carNo}}" disabled="disabled" />
-  </view>   
+    <input type="text" placeholder="请输入车牌号" value="{{carNo}}" disabled="disabled" style='left:1px; width:70%;'class="lf"  />
+    <button bindtap='ok'  class="lf td" >新增</button>
+     
+    
+  </view>  
+  <view class="pos-fixed" bindtap="ret">返回</view>
   <!-- 省 -->  
   <view class="provinces" hidden='{{hidden1}}'>  
     <view class="pro_li lf" wx:for="{{item1}}" bindtap='sheng' data-sh="{{item}}">{{item}}</view>
@@ -20,8 +24,9 @@
     <view class="pro_li lf" wx:for="{{item21}}" bindtap='other' data-ot="{{item}}">{{item}}</view>
     <view class="pro_li_view"><view class="pro_li lf" wx:for="{{item22}}" bindtap='other' data-ot="{{item}}">{{item}}</view></view>
     <view class="pro_li lf" wx:for="{{item23}}" bindtap='other' data-ot="{{item}}">{{item}}</view>
-    <view class="bot">  
-    <view class="pro_ok lf" bindtap='ok'>确认</view>
+    <view class="bot lf">  
+    <view class="pro_ok lf" bindtap='ok'>新增</view>
+    
     </view>
     <view class="pro_li lf" wx:for="{{item24}}" bindtap='other' data-ot="{{item}}">{{item}}</view>  
     <view class="bot">  

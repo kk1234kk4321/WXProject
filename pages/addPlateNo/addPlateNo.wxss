@@ -1,104 +1,140 @@
-.lf{  
-    float: left;  
-}  
-.rt{  
-    float: right;  
-}  
-.tel{   
-    background-color:white;
-    width: 76%;
-    height: 36px;
-    margin: 10px auto 0 auto;
-    padding-top: 10px;
-} 
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+
+button {
+  height: 36px;
+  margin: auto auto auto auto;
+  background-color: white;
+  padding-left: 10px;
+}
+
+button::after {
+  border: none;
+}
+
+.tel {
+  background-color: white;
+  width: 76%;
+  height: 36px;
+  margin: 10px auto 0 auto;
+  padding-top: 10px;
+}
+
 input {
-  border: 2px #00A6D6 solid;
+  border: 2px #00a6d6 solid;
   border-radius: 4px;
   height: 36px;
   padding-left: 6px;
-} 
-.chepai{  
-    height: 200rpx;  
-    line-height:200rpx;  
-}  
-.provinces{  
-    overflow: hidden;  
-    background-color: #D5D4D4;  
-    padding:30rpx 0;  
-    position: absolute;  
-    bottom: 0;  
-    left: 0;  
-    z-index: 10000;  
-}  
-.pro_li{  
-    font-size: 42rpx;  
-    width: 70rpx;  
-    height: 90rpx;  
-    line-height: 90rpx;  
-    text-align: center;  
-    border: 2rpx solid #ddd;  
-    border-radius: 6px;
-    margin: 5rpx;  
-    background-color:#FFF;  
-}  
-
-.pro_li_view{
-  padding-left:20px;
-  padding-right:20px;
+  left: 3px;
 }
 
-.pro_close{  
-    width: 120rpx;  
-    height: 90rpx;  
-    line-height: 90rpx;  
-    font-size: 40rpx;  
-    text-align: center;  
-    background-color: #FFF;  
-    border: 2rpx solid #ddd;  
-    border-radius: 6px;
-    margin: 5rpx ;  
-}  
-.pro_del{  
-    width: 100rpx;  
-    height: 90rpx;  
-    line-height: 90rpx;  
-    font-size: 32rpx;  
-    text-align: center;  
-    background-color: #0000FF;  
-    border: 2rpx solid #ddd; 
-    border-radius: 6px; 
-    margin: 5rpx;  
-    color:#FFF;
-}  
-.keyNums{  
-    overflow: hidden;  
-    background-color: #D5D4D4;  
-    padding:30rpx 0;  
-    position: absolute;  
-    bottom: 0;  
-    left: 0;  
-    z-index: 10000;  
-}  
-.pro_ok{  
-    width: 110rpx;  
-    height: 90rpx;  
-    line-height: 90rpx;  
-    font-size: 40rpx;  
-    text-align: center;  
-    background-color: #FFF;  
-    border: 2rpx solid #ddd;  
-    border-radius: 6px;
-    margin: 5rpx ; 
-    /* margin-left: 35%; */  
-}  
-.pro_d{  
-    width: 110rpx;  
-    height: 90rpx;  
-    line-height: 90rpx;  
-    font-size: 40rpx;  
-    text-align: center;  
-    background-color: #FFF;  
-    border: 2rpx solid #ddd;
-    border-radius: 6px;  
-    margin: 5rpx;
+.chepai {
+  height: 200rpx;
+  line-height: 200rpx;
+}
+
+.provinces {
+  overflow: hidden;
+  background-color: #d5d4d4;
+  padding: 30rpx 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.pro_li {
+  font-size: 42rpx;
+  width: 70rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border: 2rpx solid #ddd;
+  border-radius: 6px;
+  margin: 5rpx;
+  background-color: #fff;
+}
+
+.pro_li_view {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.pro_close {
+  width: 120rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  text-align: center;
+  background-color: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 6px;
+  margin: 5rpx;
+}
+
+.pro_del {
+  width: 100rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  text-align: center;
+  background-color: #00f;
+  border: 2rpx solid #ddd;
+  border-radius: 6px;
+  margin: 5rpx;
+  color: #fff;
+}
+
+.keyNums {
+  overflow: hidden;
+  background-color: #d5d4d4;
+  padding: 30rpx 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.pro_ok {
+  width: 110rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  text-align: center;
+  background-color: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 6px;
+  margin: 5rpx;
+  /* margin-left: 35%; */
+}
+
+.pro_d {
+  width: 110rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  text-align: center;
+  background-color: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 6px;
+  margin: 5rpx;
+}
+
+.pos-fixed {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #BEE6F2;
+  color: #00A8D5;
+  font-size: 16px;
+  justify-content: center;
 }
