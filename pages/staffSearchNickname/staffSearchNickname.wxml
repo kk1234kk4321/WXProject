@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="container-item">
+    <view class="search"> 
+      <view class="search-input">
+        <input style="width:100%;height:36px;line-height:36px;padding-left:6px;" type="text" placeholder="请搜索昵称" bindinput='nicknameInput' value="{{nickname}}"/>
+      </view> 
+      <view class="iconfont icon-sousuo4" style="font-size:24px;" bindtap="searchNickname"></view>
+    </view>
+
+    <view wx:if="{{staff.nickname!=null}}">
+      <view class="staff-item" >
+        <view class="staff-text">员工昵称</view>
+        <view class="staff-text" style="width:34%;">注册方式</view>
+        <view class="staff-text">操作</view>
+      </view>
+
+      <view class="container-item">
+        <view class="item">
+          <view class="staff-text" style="color:#000;">{{staff.nickname}}</view>
+          <view class="staff-text" style="width:34%;color:#000;">{{staff.type}}</view>
+          <view class="staff-text">
+            <button size="default" type="default" bindtap="addStaff" style="font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-park-id="{{staff.parkId}}" data-nickname="{{staff.nickname}}">增加</button>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="container-item" style="margin: 10px 20px;color:red;height:30px;line-height:30px;text-align:center;font-size:18px;" wx:else>
+      {{staff.message}}
+    </view>
+  </view>
+
+  <view class="pos-fixed" bindtap="returnBtn">返回</view>
+</view>

@@ -54,5 +54,11 @@ Page({
     wx.navigateTo({
       url: '/pages/cashPayment/cashPayment?parkNo=' + this.data.parkNo
     })
+  },
+  staffManage:function(){
+    console.log("准备进入员工管理页面===", this.data);
+    wx.navigateTo({
+      url: '/pages/staffManage/staffManage?parkNo=' + this.data.parkNo
+    })
   }
 })

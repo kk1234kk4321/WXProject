@@ -25,7 +25,9 @@
     "pages/payFeeDetailForMember/payFeeDetailForMember",
     "pages/searchCarNo/searchCarNo",
     "pages/cashPayment/cashPayment",
-    "pages/cashPaying/cashPaying"
+    "pages/cashPaying/cashPaying",
+    "pages/staffManage/staffManage",
+    "pages/staffSearchNickname/staffSearchNickname"
   ],
   "window": {
     "backgroundTextStyle": "light",
