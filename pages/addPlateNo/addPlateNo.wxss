@@ -1,3 +1,8 @@
+page{
+  height: 100%;
+  width: 100%;
+}
+
 .lf {
   float: left;
 }
@@ -6,16 +11,7 @@
   float: right;
 }
 
-button {
-  height: 36px;
-  margin: auto auto auto auto;
-  background-color: white;
-  padding-left: 10px;
-}
 
-button::after {
-  border: none;
-}
 
 .tel {
   background-color: white;
