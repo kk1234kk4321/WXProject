@@ -31,11 +31,12 @@ Page({
     var that = this
     var parkNo = that.data.parkNo
     var openid = app.globalData.openId
+    var type = 1 //1:微信注册
 
     console.log("parkNo：", parkNo)
     console.log("openid：", openid)
     wx.request({
-      url: app.globalData.url + '/car/weixin/staffList/parkNo/' + encodeURI(parkNo),
+      url: app.globalData.url + '/car/weixin/staffList/parkNo/' + encodeURI(parkNo) + '/type/' + type,
       method: 'GET',
       data: {},
       header: {
@@ -97,7 +98,7 @@ Page({
     console.log("nickname=", nickname)
 
     wx.request({
-      url: app.globalData.url + '/staff-manage/deleteStaff/nickname/' + nickname + '/parkId/' + parkId,
+      url: app.globalData.url + '/staff-manage/deleteStaff/nickname/' + encodeURI(nickname) + '/parkId/' + parkId,
       method: 'GET',
       data: {},
       header: {

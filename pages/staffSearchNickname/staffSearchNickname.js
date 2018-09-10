@@ -96,7 +96,7 @@ Page({
     console.log("nickname=", nickname)
 
     wx.request({
-      url: app.globalData.url + '/car/weixin/addStaff/nickname/' + encodeURI(nickname) + '/parkId/' + encodeURI(parkId) + '/type/' + type,
+      url: app.globalData.url + '/car/weixin/addStaff/nickname/' + encodeURI(nickname) + '/parkId/' + parkId + '/type/' + type,
       method: 'GET',
       data: {},
       header: {
