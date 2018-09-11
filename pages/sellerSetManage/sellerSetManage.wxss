@@ -1,0 +1,61 @@
+/**index.wxss**/
+.container {
+  flex:1;
+  line-height:1.0;
+  font-size:17px ;
+  background-color:white;
+  /* margin-top:10px; */
+} 
+
+.container-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+}
+
+.search {
+    width: 86%;
+    height: 40px;
+    margin: 0 auto;
+    border: 2px #28A7C5 solid;
+    border-radius: 4px;
+
+}
+
+.search-input {
+   width: 86%;
+   float: left;
+   height: 36px;
+}
+
+.icon-sousuo4 {
+  width: 14%;
+  float: right;
+  height: 36px;
+  line-height: 36px;
+  color:#28A7C5;
+  text-align: center;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border-bottom: 1px solid #DDDDDD ;
+  background: #B9DFEB; */
+  width: 100%;
+  margin: 2px auto;
+  height: 30px;
+}
+
+.item-lab {
+  float: left;
+  width: 60%;
+  padding-left: 20px;
+  color: #727272;
+}
+
+.item-descr {
+  float: right;
+  width: 40%;
+}

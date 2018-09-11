@@ -50,7 +50,7 @@
       </view>
     </view>
     <view class="duration"  >收费标准：
-      <text style='color:#82807A;font-size:13px;'>{{feetsData.freeMinute}}分钟内免费<block wx:if="{{feetsData.startMinute!=0}}">，{{feetsData.startMinute}}分钟内收费{{feetsData.startPrice}}元，超过{{feetsData.startMinute}}分钟后按每{{feetsData.unitMinute}}分钟{{feetsData.unitPrice}}元</block><block style='font-size:14px;color:#82807A' wx:if='{{feetsData.feeTop > 0.00}}'>，24小时内不超过{{feetsData.feeTop}}元。</block><block style='font-size:14px;color:#82807A' wx:else>，当前停车场未设置日最高收费。</block> 
+      <text style='color:#82807A;font-size:13px;'>{{feetsData.freeMinute}}分钟内免费，<block wx:if="{{feetsData.startMinute!=0}}">{{feetsData.startMinute}}分钟内收费{{feetsData.startPrice}}元，超过{{feetsData.startMinute}}分钟后</block>按每{{feetsData.unitMinute}}分钟{{feetsData.unitPrice}}元收费<block style='font-size:14px;color:#82807A' wx:if='{{feetsData.feeTop > 0.00}}'>，24小时内不超过{{feetsData.feeTop}}元。</block><block style='font-size:14px;color:#82807A' wx:else>，当前停车场未设置日最高收费。</block> 
       
       
       </text>

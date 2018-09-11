@@ -27,7 +27,9 @@
     "pages/cashPayment/cashPayment",
     "pages/cashPaying/cashPaying",
     "pages/staffManage/staffManage",
-    "pages/staffSearchNickname/staffSearchNickname"
+    "pages/staffSearchNickname/staffSearchNickname",
+    "pages/sellerSetManage/sellerSetManage",
+    "pages/sellerSearchNickname/sellerSearchNickname"
   ],
   "window": {
     "backgroundTextStyle": "light",
