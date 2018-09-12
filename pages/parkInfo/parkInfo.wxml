@@ -11,7 +11,7 @@
         <span style="color:#716F6A;font-size:15px;">{{parkInfo.carTotal}}</span>
       </view>
     </view>
-    <view wx:if="{{parkInfo.freeMinute!=''}}">
+    <view wx:if="{{parkInfo.freeMinute>0}}">
     <view class="item">
       <view class="item-lab">免费时间</view>
       <view class="item-descr">{{parkInfo.freeMinute}}分钟</view>

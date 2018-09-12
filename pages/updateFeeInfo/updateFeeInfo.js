@@ -6,11 +6,11 @@ Page({
   },
   onLoad(res) {
     this.setData({
-      parkNo: res.parkNo
-    }),
-    wx.setNavigationBarTitle({
-      title: '修改计费规则'
-    })
+        parkNo: res.parkNo
+      }),
+      wx.setNavigationBarTitle({
+        title: '修改计费规则'
+      })
   },
   onShow() {
     var that = this
@@ -23,7 +23,7 @@ Page({
       header: {
         "content-type": 'application/x-www-form-urlencoded'
       },
-      success: function (res) {
+      success: function(res) {
         console.log("调用车场管理接口成功")
         console.log("array====>", res)
         if (res.data != '') {
@@ -38,7 +38,7 @@ Page({
       }
     })
   },
-  unitMinuteInput: function (e) {
+  unitMinuteInput: function(e) {
     var unitMinute = e.detail.value;
     if (unitMinute.length == 0) {
       wx.showToast({
@@ -46,26 +46,34 @@ Page({
         icon: 'none',
         duration: 2000
       })
+      this.setData({
+        focus: true
+      })
     } else if (unitMinute == 0) {
       wx.showToast({
         title: '单位时间不可为0！',
         icon: 'none',
         duration: 2000
       })
-
+      this.setData({
+        focus: true
+      })
     } else if (unitMinute < 0) {
       wx.showToast({
         title: '单位时间不可小于0！',
         icon: 'none',
         duration: 2000
       })
-
+      this.setData({
+        focus: true
+      })
+    } else {
+      this.setData({
+        focus: false
+      })
     }
-    // this.setData({
-    //   focus: true
-    // })
   },
-  formSubmit: function (e) {
+  formSubmit: function(e) {
     console.log('form发生了submit事件，携带数据为：', e)
 
     var data = e.detail.value;
@@ -103,24 +111,32 @@ Page({
           icon: 'none',
           duration: 2000
         })
+        this.setData({
+          focus: true
+        })
       } else if (unitMinute == 0) {
         wx.showToast({
           title: '单位时间不可为0！',
           icon: 'none',
           duration: 2000
         })
-
+        this.setData({
+          focus: true
+        })
       } else if (unitMinute < 0) {
         wx.showToast({
           title: '单位时间不可小于0！',
           icon: 'none',
           duration: 2000
         })
-
+        this.setData({
+          focus: true
+        })
+      } else {
+        this.setData({
+          focus: false
+        })
       }
-      // this.setData({
-      //   focus: true
-      // })
     } else {
       unitMinute = unitMinute;
       wx.request({
@@ -130,12 +146,12 @@ Page({
         header: {
           "content-type": 'application/x-www-form-urlencoded'
         },
-        success: function (res) {
+        success: function(res) {
           console.log("调用修改计费规则接口成功")
           console.log("array====>", res)
           wx.redirectTo({
             url: '/pages/index/index',
-            success: function (res) {
+            success: function(res) {
               wx.showToast({
                 title: '保存成功',
                 icon: 'success',
@@ -144,7 +160,7 @@ Page({
             }
           })
         },
-        fail: function (res) {
+        fail: function(res) {
           console.log("调用修改计费规则接口失败")
           console.log("失败原因====>", res)
           wx.showToast({
