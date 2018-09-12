@@ -11,6 +11,7 @@
         <span style="color:#716F6A;font-size:15px;">{{parkInfo.carTotal}}</span>
       </view>
     </view>
+    <view wx:if="{{parkInfo.freeMinute!=''}}">
     <view class="item">
       <view class="item-lab">免费时间</view>
       <view class="item-descr">{{parkInfo.freeMinute}}分钟</view>
@@ -18,6 +19,12 @@
     <view class="item">
       <view class="item-lab">免费时间外收费：</view>
     </view>
+   </view>
+   <view wx:else>
+   <view class="item">
+      <view class="item-lab">起步收费：</view>
+    </view>
+   </view>
     <view class="item">
       <view class='item-lab'>
         <span style="color:#FF972F;font-size:18px;">{{parkInfo.startMinute}}
@@ -45,6 +52,11 @@
         <view class="item-descr">
           <span style="color:#FF972F;font-size:18px;">￥{{parkInfo.feeMonth}}</span>/月</view>
       </view>
+    </view>
+    <view wx:else>
+    
+    <view class="item-descr" style="width:90%;color:#74726D;font-size:15px;">该停车场未提供包月服务</view>
+    
     </view>
     <view class="item" style="border:none;">
       <view class="item-lab" style="width:0%;"></view>
