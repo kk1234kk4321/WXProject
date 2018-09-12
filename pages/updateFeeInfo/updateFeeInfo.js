@@ -61,9 +61,9 @@ Page({
       })
 
     }
-    this.setData({
-      focus: true
-    })
+    // this.setData({
+    //   focus: true
+    // })
   },
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e)
@@ -118,9 +118,9 @@ Page({
         })
 
       }
-      this.setData({
-        focus: true
-      })
+      // this.setData({
+      //   focus: true
+      // })
     } else {
       unitMinute = unitMinute;
       wx.request({
