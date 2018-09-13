@@ -8,6 +8,7 @@ Page({
   data: {
     nickname: '',
     parkNo: '',
+    parkId: '',
     staff: {}
   },
 
@@ -17,7 +18,8 @@ Page({
   onLoad: function (res) {
     this.setData({
       nickname: res.nickname,
-      parkNo: res.parkNo
+      parkNo: res.parkNo,
+      parkId: res.parkId
     })
   },
 
@@ -28,7 +30,7 @@ Page({
     var that = this
     var nickname = that.data.nickname
     var parkNo = that.data.parkNo
-    var openid = app.globalData.openid
+    var openid = app.globalData.openId
     var type = 1 //1:微信注册
     
     console.log("nickname=", nickname)
@@ -74,7 +76,7 @@ Page({
     var that = this
     var parkNo = that.data.parkNo
     var nickname = that.data.nickname
-    var openid = app.globalData.openid
+    var openid = app.globalData.openId
     var type = 1 //1:微信注册
 
     console.log("昵称：", nickname)
@@ -117,7 +119,7 @@ Page({
 
         if(that.data.staff.message == '') {
           wx.redirectTo({
-            url: '/pages/staffManage/staffManage?parkNo=' + parkNo,
+            url: '/pages/staffManage/staffManage?parkNo=' + parkNo + '&parkId=' + parkId,
           })
         }
       }
@@ -129,8 +131,9 @@ Page({
    */
   returnBtn: function (e) {
     var parkNo = this.data.parkNo
+    var parkId = this.data.parkId
     wx.redirectTo({
-      url: '/pages/staffManage/staffManage?parkNo=' + parkNo,
+      url: '/pages/staffManage/staffManage?parkNo=' + parkNo + '&parkId=' + parkId
     })
   }
 

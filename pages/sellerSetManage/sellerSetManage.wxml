@@ -14,20 +14,16 @@
             <view class="item-descr">{{item.nickname}}</view>
           </view>
           <view class="item">
-            <view class="item-lab">注册方式</view>
-            <view class="item-descr">{{item.type}}</view>
-          </view>
-          <view class="item">
             <view class="item-lab">剩余优惠券数量</view>
-            <view class="item-descr">{{item.remainDiscount}}</view>
+            <view class="item-descr">{{item.remainDiscount}}<text style="margin-left:2px;">张</text></view>
           </view>
           <view class="item">
             <view class="item-lab">已使用优惠券数量</view>
-            <view class="item-descr">{{item.usedDiscount}}</view>
+            <view class="item-descr">{{item.usedDiscount}}<text style="margin-left:2px;">张</text></view>
           </view>
           <view class="item">
             <view class="item-lab">抵扣时间</view>
-            <view class="item-descr">{{item.minutes}}</view>
+            <view class="item-descr">{{item.minutes}}<text style="margin-left:2px;">分钟/张</text></view>
           </view>
           <view class="item" style="border-bottom:2px #00A7D7 solid;padding-top:15px;padding-bottom:20px;">
             <button size="mini" bindtap="editSeller" style="width:120px;height:40px;line-height:40px;font-size:17px;background-color:#00A7D7;color:white;" data-park-id="{{item.parkId}}" data-nickname="{{item.nickname}}">编辑

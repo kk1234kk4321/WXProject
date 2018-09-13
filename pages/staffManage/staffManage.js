@@ -7,6 +7,7 @@ Page({
    */
   data: {
     parkNo: '',
+    parkId: '',
     nickname: '',
     staffList: {}
   },
@@ -17,6 +18,7 @@ Page({
   onLoad: function (res) {
     this.setData({
       parkNo: res.parkNo,
+      parkId: res.parkId
     })
 
     wx.setNavigationBarTitle({
@@ -75,15 +77,17 @@ Page({
     console.log("监听文本框输入，nickname=", this.data.nickname)
     var that = this
     var parkNo = that.data.parkNo
+    var parkId = that.data.parkId
     var nickname = that.data.nickname
     var openid = app.globalData.openId
     var type = 1 //1:微信注册
 
     console.log("昵称：", nickname)
     console.log("parkNo：", parkNo)
+    console.log("parkId：", parkId)
     console.log("openid：", openid)
-    wx.navigateTo({
-      url: '/pages/staffSearchNickname/staffSearchNickname?nickname=' + nickname + '&parkNo=' + parkNo
+    wx.redirectTo({
+      url: '/pages/staffSearchNickname/staffSearchNickname?nickname=' + nickname + '&parkNo=' + parkNo + '&parkId=' + parkId
     })
   },
 
@@ -111,5 +115,16 @@ Page({
         that.onShow();
       }
     })
-  }
+  },
+
+  /**
+   * 返回
+   */
+  // returnBtn: function(e) {
+  //   var parkNo = this.data.parkNo
+  //   var parkId = this.data.parkId
+  //   wx.redirectTo({
+  //     url: '/pages/parkOwnerManage/parkOwnerManage?parkNo=' + parkNo + '&parkId=' + parkId
+  //   })
+  // }
 })

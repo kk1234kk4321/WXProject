@@ -82,7 +82,7 @@ Page({
     console.log("昵称：", nickname)
     console.log("parkNo：", parkNo)
     console.log("openid：", openid)
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/sellerSearchNickname/sellerSearchNickname?nickname=' + nickname + '&parkNo=' + parkNo
     })
   },

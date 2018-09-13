@@ -10,20 +10,21 @@
       <view wx:if="{{staffList!=''}}">
         <view class="staff-item" >
           <view class="staff-text">员工昵称</view>
-          <view class="staff-text" style="width:34%;">注册方式</view>
           <view class="staff-text">操作</view>
         </view>
 
         <view class="container-item">
           <view class="item" wx:for="{{staffList}}" wx:for-index="idx" wx:for-item="item">
             <view class="staff-text" style="color:#000;">{{item.nickname}}</view>
-            <view class="staff-text" style="width:34%;color:#000;">{{item.type}}</view>
             <view class="staff-text">
-              <button size="default" type="default" bindtap="deleteStaff" style="font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-park-id="{{item.parkId}}" data-nickname="{{item.nickname}}">移除</button>
+              <button size="mini" bindtap="deleteStaff" style="width:120px;height:40px;line-height:40px;font-size:17px;background-color:#00A7D7;color:white;" data-park-id="{{item.parkId}}" data-nickname="{{item.nickname}}">删除
+              </button>
             </view>
           </view>
         </view>
       </view>
       <view style='margin-top:40px;text-align:center;color:#888888;' wx:else>该停车场下暂时没有员工</view>
+      <!-- <view style="margin-bottom:50px;"></view>
+      <view class="pos-fixed" bindtap="returnBtn">返回</view> -->
     </view>
 </view>

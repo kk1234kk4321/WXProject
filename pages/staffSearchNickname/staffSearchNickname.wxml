@@ -10,21 +10,20 @@
     <view wx:if="{{staff.nickname!=null}}">
       <view class="staff-item" >
         <view class="staff-text">员工昵称</view>
-        <view class="staff-text" style="width:34%;">注册方式</view>
         <view class="staff-text">操作</view>
       </view>
 
       <view class="container-item">
         <view class="item">
           <view class="staff-text" style="color:#000;">{{staff.nickname}}</view>
-          <view class="staff-text" style="width:34%;color:#000;">{{staff.type}}</view>
           <view class="staff-text">
-            <button size="default" type="default" bindtap="addStaff" style="font-size:16px;background-color:#BEE6F2;color:#00A7D6;border-radius:0px;" data-park-id="{{staff.parkId}}" data-nickname="{{staff.nickname}}">增加</button>
+            <button size="mini" bindtap="addStaff" style="width:120px;height:40px;line-height:40px;font-size:17px;background-color:#00A7D7;color:white;" data-park-id="{{staff.parkId}}" data-nickname="{{staff.nickname}}">增加
+            </button>
           </view>
         </view>
       </view>
     </view>
-    <view class="container-item" style="margin: 10px 20px;color:red;height:30px;line-height:30px;text-align:center;font-size:18px;" wx:else>
+    <view class="container-item" style="margin: 10px 20px;color:red;height:30px;line-height:30px;text-align:left;font-size:18px;" wx:else>
       {{staff.message}}
     </view>
   </view>
