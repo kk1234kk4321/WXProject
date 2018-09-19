@@ -19,6 +19,9 @@ page{
   height: 36px;
   margin: 10px auto 0 auto;
   padding-top: 10px;
+  display:flex;
+  align-items:center;
+
 }
 
 input {
@@ -97,16 +100,16 @@ input {
 }
 
 .pro_ok {
-  width: 110rpx;
-  height: 90rpx;
-  line-height: 90rpx;
+  width: 150rpx;
+  height: 36px;
   font-size: 40rpx;
-  text-align: center;
   background-color: #fff;
   border: 2rpx solid #ddd;
   border-radius: 6px;
-  margin: 5rpx;
-  /* margin-left: 35%; */
+  margin-left: 10px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pro_d {
