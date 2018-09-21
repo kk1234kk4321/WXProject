@@ -4,7 +4,7 @@
     <view class="" style="width:40%;padding-left:30px;color:#716F6A;">{{carNo}}</view>
     <view class="" style="width:60%;text-align:right;padding-right:30px;font-size:17px;">{{applyCar.parkName}}</view>
   </view>
-
+<view wx:if="{{applyCar.feeMonth!=0}}">
   <view class="external">外部用户</view>
 
 
@@ -42,8 +42,9 @@
     </view>
   </view>
 </view>
-
+</view>
 <view class="container-applyCar">
+
   <view style="width:60%;float:left;"><view style="padding-left:30px;">内部用户</view></view>
   <view class="applyCar" data-price="{{price}}" data-car-no="{{carNo}}" data-park-no="{{parkNo}}" wx:if="{{applyCar.status=='1'}}">
     <view class="status">申请中</view>
