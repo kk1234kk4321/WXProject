@@ -29,7 +29,8 @@
     "pages/staffManage/staffManage",
     "pages/staffSearchNickname/staffSearchNickname",
     "pages/sellerSetManage/sellerSetManage",
-    "pages/sellerSearchNickname/sellerSearchNickname"
+    "pages/sellerSearchNickname/sellerSearchNickname",
+    "pages/unpaiedeno/unpaiedeno"
   ],
   "window": {
     "backgroundTextStyle": "light",

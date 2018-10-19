@@ -8,7 +8,8 @@ Page({
     //hasUserInfo: false,
     //canIUse: wx.canIUse('button.open-type.getUserInfo'),
     plateNums: {},
-    authorty:0
+    authorty:0,
+    unpaiedcode:0
     //openId:{}
   },
   //事件处理函数
@@ -73,10 +74,12 @@ Page({
           that.getAuthorty(res.data.data.authorities);
           console.log("app.globalData.authorty==", app.globalData.authorty)
         }
-        
+        console.log(that.data)
         that.setData({
           plateNums: res.data.data.list,
-          authorty: app.globalData.authorty
+          authorty: app.globalData.authorty,
+          unpaiedcode:res.data.data.unpaiedcode
+          
         })
       }
     })
@@ -100,6 +103,12 @@ Page({
     console.log('当前车牌号为', plateNum);
     wx.navigateTo({
       url: '/pages/payFeets/payFeets?plateNum=' + plateNum
+    })
+  },
+  unpaiedeno:function(openid){
+    var that = this;
+    wx.navigateTo({
+      url: '/pages/unpaiedeno/unpaiedeno?openid=' + app.globalData.openId,
     })
   },
   searchPark: function (e) {//车位预约

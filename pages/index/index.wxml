@@ -11,12 +11,23 @@
   <view class="container-add" bindtap="addPlateNo">
     <view class="iconfont icon-jia" style="margin:0 auto;color:#4CBFE0;font-size:24px;"></view>
   </view>
+  <view wx:if="{{unpaiedcode != 0}}">
+    <view class="container-add">
+      <view style="font-size:16px;color:#000;text-align:center;width:100%;" bindtap="unpaiedeno">待支付订单</view>
+    </view>
+  </view>
   <!-- <view style="text-align:right;padding-right:20px;padding-bottom:10px;color:#807D78;">添加新车牌</view> -->
   <view class="container-others" style="padding-bottom:60px;">
-    <view class="others"><image src="../../img/cwyy.png" bindtap="searchPark"></image></view> 
+    <view class="others">
+      <image src="../../img/cwyy.png" bindtap="searchPark"></image>
+    </view>
     <!-- <view class="others"><image src="../../img/tcyh.png"></image></view> -->
-    <view class="others"><image src="../../img/cqzw.png" bindtap="rentParkingplace"></image></view>
-    <view class="others"><image src="../../img/wdzy.png" bindtap="myinfo"></image></view>
+    <view class="others">
+      <image src="../../img/cqzw.png" bindtap="rentParkingplace"></image>
+    </view>
+    <view class="others">
+      <image src="../../img/wdzy.png" bindtap="myinfo"></image>
+    </view>
     <view class="others" wx:if="{{authorty==1||authorty==2}}">
       <image src="../../img/tccgl.png" bindtap="parkManage"></image>
     </view>
